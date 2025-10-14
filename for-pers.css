@@ -202,3 +202,16 @@ footer{
   align-content: center;
  text-align: center;
 }
+@media(max-width:1000px){
+    .div-wth-info{
+flex-wrap: wrap;
+ width: 100%;
+ display: flex;
+margin: 0;
+}
+.two-down{
+    margin: 0;
+flex-wrap: wrap;
+ display: flex;
+}
+}
