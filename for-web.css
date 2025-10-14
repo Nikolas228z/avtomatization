@@ -1,0 +1,139 @@
+body{
+    margin: 0;
+}
+.dag-im{
+    background-image: url('https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNmF3NDBjbmh6eGZvYWgyb2NhdnEyNDF0bjB4OW9vNzNjbW5oNjk1MSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5k5vZwRFZR5aZeniqb/giphy.gif');
+    background-size: cover;
+    background-position: center;
+    height: 88vh;
+    width: 100%;
+}
+header{
+    position: sticky;
+    top:0;
+    align-content: center;
+}
+.navbar{
+    position: sticky;
+    top:0;
+    display: flex;
+    background-color: darkblue;
+      border-radius: 36vh;
+}
+.navbar a{
+ text-decoration: none;
+ color: black;
+}
+.navbar ul{
+    position: sticky;
+    top:0;
+    display: flex;
+    justify-content: space-around;
+     list-style-type:none;
+}
+.navbar ul li{
+    position: sticky;
+    top:0;
+     width: 20vw;
+}
+.black-button{
+ background-color:rgba(255, 255, 255, 0.16) ;
+ border-radius: 2vh;
+ border: solid white;
+ height: 5vh;
+ width: 57%;
+}
+.black-button:hover{
+ background-color:black;
+  border: solid black;
+ color: white;
+}
+.title{
+    color: white;
+}
+.left-up{
+    width: 40%;
+    height: 30vh;
+    background-color: #303030;
+    align-content: center;
+    clip-path: polygon(0 0, 55% 0, 55% 23%, 100% 23%, 100% 100%, 0 100%);
+    border-radius: 4vh;
+}
+.left-down{
+     width: 25%;
+    height: 20vh;
+    background-color: #303030;
+    align-content: center;
+    border-radius: 4vh;
+    color: white;
+    text-align: center;
+}
+.right-div{
+     width: 30%;
+    height: 30vh;
+    background-color: #303030;
+    align-content: center;
+     border-radius: 4vh;
+    color: white;
+    margin: 0 0 0 45%;
+}
+.right-left{
+     width: 30%;
+    height: 30vh;
+    background-color: #303030;
+    align-content: center;
+     border-radius: 4vh;
+    color: white;
+    margin:  0 0 0 32%;
+}
+.wth-dis{
+    display: flex;
+}
+.wth-dis1{
+    display: flex;
+    margin: 13% 0 0 0;
+}
+.three-logo{
+ margin-left: 20%;
+ width: 30%;
+ align-content: center;
+ display: flex;
+ gap: 7%;
+ text-align: center;
+}
+.three-logo a{
+ align-content: center;
+justify-content: space-around;
+}
+footer{
+ background-color: black;
+ color: white;
+ margin: 0;
+ padding: 0;
+}
+.litle-title{
+ color: white;
+ font-size: 30px;
+}
+.div-wht-dis{
+ display: flex;
+ align-content: center;
+}
+.div-wht-disp{
+ display: flex;
+ align-content: center;
+}
+.proba{
+ transform: translateY(-2vh);
+}
+.for-marg{
+ margin-left: 4%;
+}
+.logo{
+ width: 75%;
+ filter: grayscale(100%);
+}
+.for-logo{
+  align-content: center;
+ text-align: center;
+}

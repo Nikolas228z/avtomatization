@@ -1,0 +1,195 @@
+header{
+  background-image: url('avtomatization/d6683224b5de910c8c82ac257c837663.jpg');
+ background-size: cover;
+ background-position: top;
+    position: sticky;
+    top:0;
+    align-content: center;
+}
+body{
+     background-color: #0A0F1C;
+    color: #00D4FF;
+ margin: 0;
+}
+.navbar{
+    position: sticky;
+    top:0;
+    display: flex;
+   background: linear-gradient(135deg, #1e3c72, #2a5298);
+
+      border-radius: 36vh;
+}
+.navbar a{
+ text-decoration: none;
+ color: black;
+}
+.navbar ul{
+    position: sticky;
+    top:0;
+    display: flex;
+    justify-content: space-around;
+     list-style-type:none;
+}
+.navbar ul li{
+    position: sticky;
+    top:0;
+     width: 20vw;
+}
+.black-button{
+ background-color:rgba(255, 255, 255, 0.16) ;
+ border-radius: 2vh;
+ border: solid white;
+ height: 5vh;
+ width: 57%;
+}
+.black-button:hover{
+ margin: 5% 0 0 0;
+ background-color:black;
+  border: solid black;
+ color: white;
+}
+.black-button1{
+ background-color:rgba(255, 255, 255, 0.16) ;
+ border-radius: 2vh;
+ border: solid white;
+ height: 5vh;
+ width: 90%;
+}
+.black-button1:hover{
+ background-color:black;
+  border: solid black;
+ color: white;
+}
+.name label{
+     color: #80868b;
+ gap: 15vh;
+ text-decoration: underline #00D4FF;
+}
+#surname{
+ background-color: rgba(121, 121, 121, 0);
+    height: 5vh;
+ width: 90%;
+    align-content: center;
+}
+input[placeholder="Ім'я"] {
+  border:  none;
+ border-bottom: 1px solid #00D4FF; /* підкреслення */
+  outline: none;
+}
+input[placeholder="Пароль"] {
+  border:  none;
+ border-bottom: 1px solid #00D4FF; /* підкреслення */
+  outline: none;
+}
+input[placeholder="Прізвище"] {
+  border:  none;
+ border-bottom: 1px solid #00D4FF; /* підкреслення */
+  outline: none;
+}
+input[placeholder="Ім'я"]::placeholder {
+  color: #00D4FF; /* будь-який колір */
+  opacity: 1; /* щоб точно не було напівпрозорим */
+}
+input[placeholder="Прізвище"]::placeholder {
+  color: #00D4FF; /* будь-який колір */
+  opacity: 1; /* щоб точно не було напівпрозорим */
+}
+input[placeholder="Пароль"]::placeholder {
+  color: #00D4FF; /* будь-який колір */
+  opacity: 1; /* щоб точно не було напівпрозорим */
+}
+#name{
+ background-color: rgba(121, 121, 121, 0);
+    height: 5vh;
+ width: 90%;
+    align-content: center;
+}
+#pasword{
+ background-color: rgba(121, 121, 121, 0);
+    height: 5vh;
+ width: 90%;
+    align-content: center;
+}
+.pos-for-im{
+ width: 100%;
+ height: 93vh;
+ z-index: 9;
+}
+.zahal-div{
+ width: 25%;
+ margin: 0 auto;
+ text-align: center;
+ background-color: rgba(121, 121, 121, 0.51);
+ border: solid #00D4FF;
+ border-radius: 4vh;
+ transform: translateY(-83vh);
+}
+.div-wht-dis{
+ margin: 0 auto;
+}
+.white-a{
+ color: #00D4FF;
+ text-decoration: none;
+ margin: 3%;
+}
+.white-a:hover{
+ color: #0092b0;
+}
+.blu-a{
+ margin-left: 2%;
+  color: #00D4FF;
+ text-decoration: none;
+}
+.blu-a:hover{
+  text-shadow: 0 0 10px #00D4FF, 0 0 20px #00D4FF;
+}
+.for-marg{
+ margin: 0 0 5% 0;
+}
+.three-logo{
+ margin-left: 20%;
+ width: 30%;
+ align-content: center;
+ display: flex;
+ gap: 7%;
+ text-align: center;
+}
+.three-logo a{
+ align-content: center;
+justify-content: space-around;
+}
+footer{
+ background-color: black;
+ color: white;
+ margin: 0;
+ padding: 0;
+}
+.litle-title{
+ color: white;
+ font-size: 30px;
+}
+.div-wht-dis{
+ display: flex;
+ align-content: center;
+}
+.div-wht-disp{
+ display: flex;
+ align-content: center;
+}
+.proba{
+ transform: translateY(-2vh);
+}
+.for-marg{
+ margin-left: 4%;
+}
+.logo{
+ width: 75%;
+ filter: grayscale(100%);
+}
+.for-logo{
+  align-content: center;
+ text-align: center;
+}
+.more-less{
+  height: 90vh;
+}
