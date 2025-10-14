@@ -82,8 +82,10 @@ body{
     height: 50vh;
     object-fit: cover;
     transition: all 0.5s ease;
+        transform: scale(2);
 }
 .overlay{
+    transform: scaleX(2);
     position: absolute;
     top: 0;
     left: 0;
@@ -207,11 +209,16 @@ footer{
 flex-wrap: wrap;
  width: 100%;
  display: flex;
-margin: 0;
+    right: 50%;
+        transform: translate(36%);
+
 }
 .two-down{
     margin: 0;
 flex-wrap: wrap;
  display: flex;
+      right: 50%;
+    transform: translate(50%);
+
 }
 }
