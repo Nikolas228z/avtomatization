@@ -3,6 +3,12 @@ body
 margin: 0;
 }
 .img-form{
+position: absolute;
 height: 100%;
 width: 100%;
+z-index: 100;
+}
+.section1
+{
+display: flex;
 }
