@@ -20,28 +20,9 @@ header{
     top:0;
     align-content: center;
 }
+
 .navbar{
-    position: sticky;
-    top:0;
-    display: flex;
-   background: linear-gradient(135deg, #1e3c72, #2a5298);
-      border-radius: 36vh;
- align-content: center;
-}
-.navbar ul li a{
- text-decoration: none;
- color: black;
- align-content: center;
-}
-.navbar ul{
- text-align: center;
-    display: flex;
- gap: 40%;
- align-content: center;
-     list-style-type:none;
-}
-.navbar ul li{
-    position: sticky;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
 }
 .black-button{
  padding: 3%;
