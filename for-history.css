@@ -1,31 +1,24 @@
 header{
-    position: sticky;
+    position: fixed;
     top:0;
+    width: 100%;
+    z-index: 100;
     align-content: center;
 }
+.navbar-nav{
+ width: 100%;
+ gap:22%;
+}
+.navbar-nav li a{
+ color: #cee4ff;
+ font-weight: 594;
+}
 .navbar{
-    position: sticky;
-    top:0;
-    display: flex;
-   background: linear-gradient(135deg, #1e3c72, #2a5298);
-
-      border-radius: 36vh;
-}
-.navbar a{
- text-decoration: none;
- color: black;
-}
-.navbar ul{
-    position: sticky;
-    top:0;
-    display: flex;
-    justify-content: space-around;
-     list-style-type:none;
-}
-.navbar ul li{
-    position: sticky;
-    top:0;
-     width: 20vw;
+ width: 98%;
+ margin: 0 auto;
+ border-radius: 10px;
+ margin-top: 1%;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
 }
 .black-button{
  background-color:rgba(255, 255, 255, 0.16) ;
