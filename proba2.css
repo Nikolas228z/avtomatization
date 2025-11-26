@@ -1,40 +1,51 @@
-body
-{
-margin: 0;
+body {
+    margin: 0;
 }
-.img-form{
-position: absolute;
-height: 80%;
-width: 100%;
-z-index: -100
+.img-form {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    width: 100%;
+    z-index: -1;
 }
-.section1
-{
-display: flex;
-width: 80%
+.section1 {
+    position: relative; /* прив’язка для absolute */
+    height: 80vh;
+    overflow: hidden;
+    display: flex;
 }
-.section1 div
-{
-background-color: #1500ff;
-width: 20%;
-height: 20%
+.section1 div {
+    z-index: 1;
 }
-.left
-{
-display: flex;
-flex-direction: column;
-justify-content: left;
-width: 50%;
+.right-left {
+    height: 100%;
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
 }
-.right
-{
-display: flex;
-flex-direction: column;
-justify-content: right;
-width: 50%;
+.left {
+    margin-left: 0%;
+    flex-direction: column;
+    width: 30%;
+    height: 100%;
+    color: white;
+    background-color: #1500ff;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
 }
-right-left{
-display: flex;
-
+.right {
+    text-align: center;
+    flex-direction: column;
+    justify-content: right;
+    width: 30%;
+    color: white;
+    background-color: #1500ff;
+    display: flex;
 }
-/* */
+.left-up{
+height: 20%;
+}
