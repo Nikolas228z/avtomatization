@@ -10,6 +10,9 @@ h3 {
     font-size: 3vh;
     font-weight: 1112;
 }
+.h4 {
+    font-weight: 1000;
+}
 .navbar {
     position: sticky;
     top: 0;
@@ -54,6 +57,8 @@ body {
 .for-img {
     width: 80%;
     margin: 0 10% 0 10%;
+    border-radius: 40px;
+    box-shadow: 1px 3px 183px rgba(42, 82, 152, 0.41);
 }
 .htoiyak {
     text-align: center;
@@ -62,7 +67,8 @@ body {
     margin-bottom: 0 auto;
 }
 .text {
-    font-weight: 800;
+    font-weight: 1000;
+    font-size: larger;
     text-align: center;
     margin: 3% 5% 0 5%;
 }
@@ -117,14 +123,15 @@ body {
     transition: all 0.5s ease;
     transform: translateY(20px);
 }
-.overlay h3 {
+.overlay h3,
+h4 {
     text-align: center;
-    font-size: 23px;
+    font-size: 28px;
     margin-bottom: 10px;
     transform: translateY(-20px);
     transition: all 0.3s ease;
 }
-.overlay h1 {
+.overlay h2 {
     text-align: center;
     font-size: 30px;
     margin-bottom: 10px;
@@ -193,6 +200,7 @@ footer {
 .litle-title {
     color: white;
     font-size: 30px;
+    font-weight: 1000;
 }
 .div-wht-dis {
     display: flex;
@@ -209,7 +217,7 @@ footer {
     margin-left: 4%;
 }
 .logo {
-    width: 75%;
+    width: 93%;
     filter: grayscale(100%);
 }
 .for-logo {
