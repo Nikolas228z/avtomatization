@@ -60,6 +60,7 @@ body{
 }
 .title{
     text-align: center;
+    font-size: 3vh;
 }
 .wth-wid{
     width: 80%;
@@ -67,6 +68,7 @@ body{
 }
 .main-title{
     text-align: center;
+    color: #8c9ebe;
     font-size:2.9rem;
 }
 .three-logo{
