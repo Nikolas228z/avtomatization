@@ -1,0 +1,44 @@
+.three-logo {
+  margin-left: 20%;
+  width: 30%;
+  align-content: center;
+  display: flex;
+  gap: 7%;
+  text-align: center;
+}
+.three-logo a {
+  align-content: center;
+  justify-content: space-around;
+}
+footer {
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+.litle-title {
+  color: white;
+  font-size: 30px;
+}
+.div-wht-dis {
+  display: flex;
+  align-content: center;
+}
+.div-wht-disp {
+  display: flex;
+  align-content: center;
+}
+.proba {
+  transform: translateY(-2vh);
+}
+.for-marg {
+  margin-left: 4%;
+}
+.logo {
+  width: 75%;
+  filter: grayscale(100%);
+}
+.for-logo {
+  align-content: center;
+  text-align: center;
+}
