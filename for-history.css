@@ -12,22 +12,29 @@ body{
     width: 40%;
     margin-left: 7%;
         border-radius: 2vh;
+    box-shadow: 1px 3px 96px rgba(42, 82, 152, 0.41);
 }
 .down-img{
     width: 40%;
     margin-right: 7%;
         border-radius: 2vh;
+    box-shadow: 1px 3px 96px rgba(42, 82, 152, 0.41);
 }
 .title{
     text-align: center;
+    font-size: 3vh;
+    font-variant-east-asian: full-width;
 }
 .wth-wid{
     width: 80%;
       margin: 0 auto;
+    text-align: center;
+    font-size: 2.5vh;
 }
 .main-title{
     text-align: center;
-    font-size:2.9rem;
+    color: #8c9ebe;
+    font-size:3rem;
 }
 .for-down-marg{
     margin: 0 0 5% 0;
