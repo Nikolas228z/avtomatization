@@ -1,119 +1,56 @@
-header {
-    position: sticky;
-    top: 0;
-    align-content: center;
-}
-h1,
-h3 {
-    font-family: "Science Gothic", sans-serif;
-    color: #8c9ebe;
-    font-size: 3vh;
-    font-weight: 1112;
-}
-.h4 {
-    font-weight: 1000;
-}
-.navbar {
-    position: sticky;
-    top: 0;
-    display: flex;
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
 
-    border-radius: 36vh;
-}
-.navbar a {
-    text-decoration: none;
-    color: black;
-}
-.navbar ul {
-    position: sticky;
-    top: 0;
-    display: flex;
-    justify-content: space-around;
-    list-style-type: none;
-}
-.navbar ul li {
-    position: sticky;
-    top: 0;
-    width: 20vw;
-}
-.black-button {
-    background-color: rgba(255, 255, 255, 0.16);
-    border-radius: 2vh;
-    border: solid white;
-    height: 5vh;
-    width: 57%;
-}
-.black-button:hover {
-    background-color: black;
-    border: solid black;
-    color: white;
-}
-body {
-    background-color: #0a0f1c;
+body{
+     background-color: #0A0F1C;
     color: white;
     margin: 0;
 }
-.for-img {
+.for-img{
     width: 80%;
     margin: 0 10% 0 10%;
-    border-radius: 40px;
-    box-shadow: 1px 3px 183px rgba(42, 82, 152, 0.41);
 }
-.htoiyak {
-    text-align: center;
-    font-size: 3vh;
-    margin-top: 30px;
-    margin-bottom: 0 auto;
-}
-.text {
-    font-weight: 1000;
-    font-size: larger;
-    text-align: center;
+.text{
     margin: 3% 5% 0 5%;
 }
-.title {
+.title{
     text-align: center;
-    font-size: 3vh;
-    color: #8c9ebe;
     width: 90%;
-    margin: 40px;
+    margin: 0 auto;
 }
-.div-wth-info {
-    margin: 0 13% 0 13%;
-    width: 100%;
-    display: flex;
-    gap: 7%;
+.div-wth-info{
+     margin:0 13% 0 13%;
+ width: 100%;
+ display: flex;
+ gap: 7%;
 }
-.two-down {
-    margin: 1% 0 5% 26%;
-    width: 100%;
-    align-content: center;
-    display: flex;
-    gap: 3%;
+.two-down{
+     margin:1% 0 5% 26%;
+ width:     100%;
+ align-content: center;
+ display: flex;
+ gap: 3%;
 }
-.image-container {
-    display: inline-block;
+.image-container{
+     display: inline-block;
     position: relative;
     overflow: hidden;
     cursor: pointer;
     border-radius: 2vh;
 }
-.image-container img {
-    width: 100%;
+.image-container img{
+     width: 100%;
     height: 50vh;
     object-fit: cover;
     transition: all 0.5s ease;
-    transform: scale(2);
+        transform: scale(2);
 }
-.overlay {
+.overlay{
     transform: scaleX(2);
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, rgba(0, 198, 255, 0.7), rgba(0, 114, 255, 0.69));
+    background:linear-gradient(45deg, rgba(0, 198, 255, 0.7), rgba(0, 114, 255, 0.69));
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -123,120 +60,124 @@ body {
     transition: all 0.5s ease;
     transform: translateY(20px);
 }
-.overlay h3,
-h4 {
+.overlay h3{
     text-align: center;
-    font-size: 28px;
+    font-size: 23px;
     margin-bottom: 10px;
     transform: translateY(-20px);
     transition: all 0.3s ease;
 }
-.overlay h2 {
-    text-align: center;
+.overlay h1{
+     text-align: center;
     font-size: 30px;
     margin-bottom: 10px;
     transform: translateY(-20px);
     transition: all 0.3s ease;
 }
-.overlay p {
+.overlay p{
     font-size: 16px;
     transform: translateY(20px);
-    transition: all 0.3s ease;
+      transition: all 0.3s ease;
     text-align: center;
     padding: 0 20px;
 }
-.image-container:hover img {
+.image-container:hover img{
     transition: scale(1.1);
     filter: brightness(0.7);
 }
-.image-container:hover .overlay {
+.image-container:hover .overlay{
     opacity: 1;
     transform: translateY(0);
 }
-.image-container:hover .overlay h3 {
+.image-container:hover .overlay h3{
     transform: translateY(0);
     transition-delay: 0.2s;
 }
-.image-container:hover .overlay h2 {
+.image-container:hover .overlay h1{
     transform: translateY(0);
     transition-delay: 0.2s;
 }
-.image-container:hover .overlay p {
+.image-container:hover .overlay p{
     transform: translateY(0);
     transition-delay: 0.3s;
 }
-.image-container:after {
-    content: "";
+.image-container:after{
+    content: '';
     position: absolute;
     top: 0;
     left: -100%;
     width: 50%;
     height: 100%;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+    background: linear-gradient(
+    to right,
+        rgba(255, 255, 255, 0)0%,
+        rgba(255, 255, 255, 0.3)100%
+    );
     transform: skewX(-25deg);
     transition: all 0.6s ease;
 }
-.image-container:hover::after {
+.image-container:hover::after{
     left: 150%;
 }
-.three-logo {
-    margin-left: 20%;
-    width: 30%;
-    align-content: center;
-    display: flex;
-    gap: 7%;
-    text-align: center;
+.three-logo{
+ margin-left: 20%;
+ width: 30%;
+ align-content: center;
+ display: flex;
+ gap: 7%;
+ text-align: center;
 }
-.three-logo a {
-    align-content: center;
-    justify-content: space-around;
+.three-logo a{
+ align-content: center;
+justify-content: space-around;
 }
-footer {
-    background-color: black;
-    color: white;
-    margin: 0;
-    padding: 0;
+footer{
+ background-color: black;
+ color: white;
+ margin: 0;
+ padding: 0;
 }
-.litle-title {
-    color: white;
-    font-size: 30px;
-    font-weight: 1000;
+.litle-title{
+ color: white;
+ font-size: 30px;
 }
-.div-wht-dis {
-    display: flex;
-    align-content: center;
+.div-wht-dis{
+ display: flex;
+ align-content: center;
 }
-.div-wht-disp {
-    display: flex;
-    align-content: center;
+.div-wht-disp{
+ display: flex;
+ align-content: center;
 }
-.proba {
-    transform: translateY(-2vh);
+.proba{
+ transform: translateY(-2vh);
 }
-.for-marg {
-    margin-left: 4%;
+.for-marg{
+ margin-left: 4%;
 }
-.logo {
-    width: 93%;
-    filter: grayscale(100%);
+.logo{
+ width: 75%;
+ filter: grayscale(100%);
 }
-.for-logo {
-    align-content: center;
-    text-align: center;
+.for-logo{
+  align-content: center;
+ text-align: center;
 }
-@media (max-width: 1000px) {
-    .div-wth-info {
-        flex-wrap: wrap;
-        width: 100%;
-        display: flex;
-        right: 50%;
+@media(max-width:1000px){
+    .div-wth-info{
+flex-wrap: wrap;
+ width: 100%;
+ display: flex;
+    right: 50%;
         transform: translate(36%);
-    }
-    .two-down {
-        margin: 0;
-        flex-wrap: wrap;
-        display: flex;
-        right: 50%;
-        transform: translate(50%);
-    }
+
+}
+.two-down{
+    margin: 0;
+flex-wrap: wrap;
+ display: flex;
+      right: 50%;
+    transform: translate(50%);
+
+}
 }
