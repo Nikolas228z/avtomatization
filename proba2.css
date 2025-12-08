@@ -1,0 +1,211 @@
+body {
+    margin: 0;
+    background-color: black;
+}
+@keyframes test {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.img-form {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    width: 100%;
+    z-index: -1;
+    animation-name: test;
+    animation-duration: 1s;
+}
+.section1 {
+    position: relative; /* прив’язка для absolute */
+    height: 80vh;
+    overflow: hidden;
+    display: flex;
+    border: 20px solid black;
+}
+.section1 div {
+    z-index: 1;
+}
+.right-left {
+    height: 100%;
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+}
+.left {
+    margin-left: 0%;
+    flex-direction: column;
+    width: 25%;
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+
+    animation-duration: 1.5s;
+}
+
+.right {
+    margin-left: 0%;
+    flex-direction: column;
+    width: 25%;
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.left-up {
+    height: 20%;
+    background-color: black;
+    border-radius: 0 0 30px 0;
+    align-content: center;
+    animation-name: left-up;
+    animation-duration: 1.5s;
+}
+@keyframes left-up {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.left-down {
+    background-color: black;
+    border-radius: 0 30px 0 0;
+    animation-name: left-down;
+    animation-duration: 1.5s;
+}
+@keyframes left-down {
+    0% {
+        /* Початкова позиція: повністю за лівим краєм екрана */
+        /* Використання translateX допомагає уникнути проблем з розрахунками ширини */
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        /* Кінцева позиція: на екрані, лівий край на 0 */
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.right-up {
+    background-color: black;
+    border-radius: 0 0 0 30px;
+    width: 100%;
+    animation-name: right-up;
+    animation-duration: 1.5s;
+}
+@keyframes right-up {
+    0% {
+        transform: translateX(100%); /* Виїжджає справа наліво */
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.right-down {
+    background-color: black;
+    border-radius: 30px 0 0 0;
+    align-content: center;
+    height: 15%;
+    animation-duration: 1.5s;
+    animation-name: right-down;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+@keyframes right-down {
+    0% {
+        transform: translateX(100%); /* Виїжджає справа наліво */
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.avtomatization {
+    color: #00d4ff;
+    text-shadow:
+        0 0 10px #00d4ff,
+        0 0 20px #00d4ff;
+    font-size: 200%;
+    margin-bottom: 10px;
+    margin-left: 10%;
+}
+
+/* .Moreabtus{
+transition-delay: 1;
+transition-duration: 1.5s;
+width: 50%;
+}
+.Moreabtus:hover{
+color: black;
+background: linear-gradient(135deg, #00c6ff, #0072ff);
+box-shadow: inset 0 -100px 0 0 linear-gradient(135deg, #00c6ff, #0072ff);
+cursor: pointer;
+}
+*/
+
+.div1 {
+    background-color: black;
+    width: 125%;
+    color: #55e2ff;
+    text-shadow:
+        0 0 10px #00d4ff,
+        0 0 20px #00d4ff;
+    font-size: 125%;
+    padding: 5%;
+    border-radius: 0 20px 0 0;
+    text-align: left;
+    margin-left: 10%;
+}
+.ittech {
+    margin: 0;
+}
+
+.Moreabtus {
+    padding: 12px 25px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: white;
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+
+    transition: color 1.5s ease;
+}
+
+/* Псевдоелемент — градієнт, який плавно проявляється */
+.Moreabtus::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    opacity: 0; /* спочатку невидимий */
+    transition: opacity 1.5s ease;
+    z-index: -1;
+}
+
+.Moreabtus:hover {
+    color: black;
+}
+
+.Moreabtus:hover::before {
+    opacity: 1; /* плавно проявляємо фон */
+}
