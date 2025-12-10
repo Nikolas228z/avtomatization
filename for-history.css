@@ -1,41 +1,65 @@
-
-body{
-     background-color: #0A0F1C;
+body {
+    background-color: #0a0f1c;
     color: white;
     margin: 0;
 }
-.div-wht-dis{
+.mainSection {
+    padding: 20vh;
+}
+.div-wht-dis {
     display: flex;
     align-content: center;
 }
-.up-img{
+.up-img {
     width: 40%;
     margin-left: 7%;
-        border-radius: 2vh;
+    border-radius: 2vh;
     box-shadow: 1px 3px 96px rgba(42, 82, 152, 0.41);
 }
-.down-img{
+.down-img {
     width: 40%;
     margin-right: 7%;
-        border-radius: 2vh;
+    border-radius: 2vh;
     box-shadow: 1px 3px 96px rgba(42, 82, 152, 0.41);
 }
-.title{
+.title {
     text-align: center;
     font-size: 3vh;
     font-variant-east-asian: full-width;
 }
-.wth-wid{
+.wth-wid {
     width: 80%;
-      margin: 0 auto;
+    margin: 0 auto;
     text-align: center;
     font-size: 2.5vh;
 }
-.main-title{
+.main-title {
     text-align: center;
     color: #8c9ebe;
-    font-size:3rem;
+    font-size: 3rem;
 }
-.for-down-marg{
+.for-down-marg {
     margin: 0 0 5% 0;
+}
+.firstPage {
+    height: 30vh;
+    width: 40%;
+    background-color: green;
+    border-radius: 4vh 0 0 4vh;
+    border: 1px solid;
+
+}
+.turned {
+    transform: translateX(100%) rotate3d(0, 1, 0, 180deg);
+    animation-name: anim;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+@keyframes anim {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%) rotate3d(0, 1, 0, 180deg);
+    }
 }
