@@ -26,10 +26,9 @@ footer {
 }
 .div-wht-disp {
   display: flex;
-  align-content: center;
 }
 .proba {
-  transform: translateY(-2vh);
+  width: 100%;
 }
 .for-marg {
   margin-left: 4%;
