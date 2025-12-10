@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Вікторина на кнопках</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+
+    <h1>Вікторина</h1>
+
+    <p>Питання 1</p>
+    <div id="q1">
+        <button onclick="answer(1, true)">Відповідь 1</button>
+        <button onclick="answer(1, false)">Відповідь 2</button>
+        <button onclick="answer(1, false)">Відповідь 3</button>
+        <button onclick="answer(1, false)">Відповідь 4</button>
+    </div>
+    <div id="msg1" class="msg">Відповідь зараховано!</div>
+
+    <p>Питання 2</p>
+    <div id="q2">
+        <button onclick="answer(2, false)">Відповідь 1</button>
+        <button onclick="answer(2, true)">Відповідь 2</button>
+        <button onclick="answer(2, false)">Відповідь 3</button>
+        <button onclick="answer(2, false)">Відповідь 4</button>
+    </div>
+    <div id="msg2" class="msg">Відповідь зараховано!</div>
+
+    <p>Питання 3</p>
+    <div id="q3">
+        <button onclick="answer(3, false)">Відповідь 1</button>
+        <button onclick="answer(3, false)">Відповідь 2</button>
+        <button onclick="answer(3, true)">Відповідь 3</button>
+        <button onclick="answer(3, false)">Відповідь 4</button>
+    </div>
+    <div id="msg3" class="msg">Відповідь зараховано!</div>
+
+    <p>Питання 4</p>
+    <div id="q4">
+        <button onclick="answer(4, true)">Відповідь 1</button>
+        <button onclick="answer(4, false)">Відповідь 2</button>
+        <button onclick="answer(4, false)">Відповідь 3</button>
+        <button onclick="answer(4, false)">Відповідь 4</button>
+    </div>
+    <div id="msg4" class="msg">Відповідь зараховано!</div>
+
+    <p>Питання 5</p>
+    <div id="q5">
+        <button onclick="answer(5, false)">Відповідь 1</button>
+        <button onclick="answer(5, false)">Відповідь 2</button>
+        <button onclick="answer(5, true)">Відповідь 3</button>
+        <button onclick="answer(5, false)">Відповідь 4</button>
+    </div>
+    <div id="msg5" class="msg">Відповідь зараховано!</div>
+
+    <p id="result"></p>
+    <script src="quiz.js"></script>
+</body>
+</html>
+
