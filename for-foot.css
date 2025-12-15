@@ -14,11 +14,11 @@ footer {
   background-color: black;
   color: white;
   margin: 0;
-  padding: 0;
 }
 .litle-title {
   color: white;
   font-size: 30px;
+  font-weight: 900;
 }
 .div-wht-dis {
   display: flex;
@@ -31,13 +31,46 @@ footer {
   width: 100%;
 }
 .for-marg {
-  margin-left: 4%;
+  margin-left: 5%;
 }
 .logo {
-  width: 75%;
+  width: 77%;
   filter: grayscale(100%);
 }
 .for-logo {
   align-content: center;
   text-align: center;
+}
+svg {
+  padding-right: 13px;
+  width: 49px;
+}
+@media (max-width: 1000px) {
+  .litle-title {
+    color: white;
+    font-size: 55px;
+    font-weight: 1013;
+  }
+  svg {
+    padding-right: 13px;
+    width: 49px;
+  }
+  p {
+    font-size: 35px;
+  }
+  footer {
+    width: 79vh;
+    padding: 131px;
+  }
+  .logo {
+    width: 163%;
+  }
+  .three-logo {
+    margin-left: 15%;
+    width: 30%;
+    align-content: center;
+    display: flex;
+    gap: 7%;
+    text-align: center;
+  }
 }
