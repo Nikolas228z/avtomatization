@@ -68,6 +68,12 @@ body {
     align-content: center;
     animation-name: left-up;
     animation-duration: 1.5s;
+    text-align: center;
+    color: #ffffff;
+    text-shadow:
+        0 0 2px #00d4ff,
+        0 0 22px #00d4ff;
+    font-size: 166%;
 }
 @keyframes left-up {
     0% {
@@ -105,6 +111,9 @@ body {
     animation-name: right-up;
     animation-duration: 1.5s;
 }
+.h-for-right-up{
+    font-size: 14px;
+}
 @keyframes right-up {
     0% {
         transform: translateX(100%); /* Виїжджає справа наліво */
@@ -117,7 +126,7 @@ body {
 }
 .right-down {
     background-color: black;
-    border-radius: 30px 0 0 0;
+    border-radius: 30px 0 0 0 orange;
     align-content: center;
     height: 15%;
     animation-duration: 1.5s;
@@ -142,9 +151,10 @@ body {
     text-shadow:
         0 0 10px #00d4ff,
         0 0 20px #00d4ff;
-    font-size: 200%;
+    font-size: 187%;
     margin-bottom: 10px;
     margin-left: 10%;
+    align-content: center
 }
 
 /* .Moreabtus{
