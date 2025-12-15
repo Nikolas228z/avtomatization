@@ -1,44 +1,63 @@
 body {
-    background-color: #f5f5f5;
-    padding: 20px;
     font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    padding: 20px;
 }
 
-h1 {
-    text-align: center;
-    margin-bottom: 30px;
+h2 {
+    margin-bottom: 20px;
 }
 
-div {
+.question {
+    background: #fff;
+    padding: 15px;
     margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-button {
-    margin-right: 10px;
-    margin-bottom: 5px;
+.answers button {
+    margin: 5px;
     padding: 8px 15px;
     border: none;
-    background-color: #008cff;
-    color: white;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
-    transition: 0.2s;
+    background: #e0e0e0;
 }
 
-button:hover {
-    background-color: #006cd1;
+.answers button:hover {
+    background: #d0d0d0;
 }
 
-.msg {
-    display: none;
-    font-weight: bold;
-    color: green;
-    margin-top: 5px;
+.answers button.selected {
+    background: #b3d9ff;
+}
+
+.answers button.correct {
+    background: #9be29b;
+}
+
+.answers button.wrong {
+    background: #f7a1a1;
+}
+
+button.submit {
+    display: block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #cccccc;
+}
+
+button.submit:disabled {
+    background: #aaaaaa;
+    cursor: not-allowed;
 }
 
 #result {
-    font-size: 20px;
-    font-weight: bold;
     margin-top: 20px;
-    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
 }
