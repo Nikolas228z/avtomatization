@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    padding: 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.question {
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.answers button {
+    margin: 5px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #e0e0e0;
+}
+
+.answers button:hover {
+    background: #d0d0d0;
+}
+
+.answers button.selected {
+    background: #b3d9ff;
+}
+
+.answers button.correct {
+    background: #9be29b;
+}
+
+.answers button.wrong {
+    background: #f7a1a1;
+}
+
+button.submit {
+    display: block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #cccccc;
+}
+
+button.submit:disabled {
+    background: #aaaaaa;
+    cursor: not-allowed;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
