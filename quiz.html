@@ -6,14 +6,17 @@
         <link rel="stylesheet" href="quiz.css" />
     </head>
     <body>
-        <div>
-            <h1 id="question"></h1>
+        <div id="div">
+        <h1 id="question"></h1>
             <button onclick="check(this, 1)" id="answer1"></button>
             <button onclick="check(this, 2)" id="answer2"></button>
             <button onclick="check(this, 3)" id="answer3"></button>
             <button onclick="check(this, 4)" id="answer4"></button>
         </div>
-        <button onclick="next()" id="nextquest"></button>
-        <script src="quiz.js"></script>
+              <button onclick="start()" id="button" >Start Quiz</button>
+        <!--<button onclick="ned()" id="next">Next question</button>
+        -->
+    <p id="result"></p>
+       <script src="quiz.js"></script>
     </body>
 </html>
