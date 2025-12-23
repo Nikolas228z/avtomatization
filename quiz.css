@@ -1,10 +1,14 @@
-#div{
-display: none;
-
+#div {
+    display: none;
 }
-#next{
-display: none;
+#next {
+    display: none;
 }
-button{
-background-color: white;
+button {
+    background-color: white;
+}
+.div2 {
+    height: 1px;
+    width: 0%;
+    background-color: black;
 }
