@@ -61,6 +61,15 @@ width: 70%;
 .for-center{
     text-align: center;
     height: 80vh;
+
+}
+.for-center div
+{
+align-content: center;}
+.for-center div p{
+    margin: 0;
+     font-weight: 900;
+    font-size: 1.2rem;
 }
 .first-div{
     color: white;
@@ -85,9 +94,11 @@ width: 70%;
 }
 .div-wht-dis{
     display: flex;
+
 }
 .div-wht-dis2{
     display: flex;
+
     justify-content: space-around;
     transform: translateY(12vh);
 }
