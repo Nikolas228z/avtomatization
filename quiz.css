@@ -11,4 +11,5 @@ button {
     height: 1px;
     width: 0%;
     background-color: black;
+    display: flex;
 }

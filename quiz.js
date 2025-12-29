@@ -14,7 +14,6 @@ let buttons = div.getElementsByTagName("button");
 let div2 = document.getElementById("div2");
 let green = document.getElementById("green");
 let red = document.getElementById("red");
-console.log(buttons);
 const questions = [
     { id: 1, name: "question1", answer1: "a1", answer2: "a2", correctAnswer: 1, answer3: "a3", answer4: "a4" },
     { id: 2, name: "question2", answer1: "a1", answer2: "a2", correctAnswer: 2, answer3: "a3", answer4: "a4" },
@@ -42,9 +41,14 @@ function check(button, correct) {
     if (currentQuestion == questions.length) {
         div.style.display = "none";
         let forGreen = score * allquestion;
+        let forRed = 100-forGreen;
         console.log(forGreen);
-        let forRed = question.length - score;
         console.log(forRed);
+        green.style.backgroundColor = "green";
+        red.style.backgroundColor = "red";
+        green.style.width = forGreen+"%";
+        red.style.width = forRed+"%";
+        div2.style.height = "5vh";
         p.textContent = "Your score:" + score + " Answered correct:" + score;
     } else{
 
