@@ -1,5 +1,6 @@
 let butonOne = document.getElementById("pageOne");
 let butonTwo = document.getElementById("pageTwo");
+ let reTaxt = document.getElementById("titleOfbook");
 butonOne.addEventListener("click",  e => {
     ChangingLeft(e.target);
 });
@@ -30,7 +31,8 @@ function changingRight(n){
 function forChangeInRight(){
     let changLeft = document.getElementById("pageOne");
     let taxt = document.getElementById("titleOfbook");
-    taxt.classList.add("titleOfBook");
+    console.log(reTaxt);
+    taxt.classList.add("returnOne");
     changLeft.classList.remove("turned");
     taxt.classList.remove("titleOfBook");
     changLeft.classList.add("returnedd");
