@@ -91,4 +91,18 @@ button.submit:disabled {
 }
 footer {
     border-top: inset #8d95f5;
+#div {
+    display: none;
+}
+#next {
+    display: none;
+}
+button {
+    background-color: white;
+}
+.div2 {
+    height: 1px;
+    width: 0%;
+    background-color: black;
+    display: flex;
 }
