@@ -30,8 +30,7 @@ function changingRight(n){
 function forChangeInRight(){
     let changLeft = document.getElementById("pageOne");
     let taxt = document.getElementById("titleOfbook");
-    taxt.classList.add("titleOfBook");
+    taxt.classList.add("returnOne");
     changLeft.classList.remove("turned");
-    taxt.classList.remove("titleOfBook");
     changLeft.classList.add("returnedd");
 }
