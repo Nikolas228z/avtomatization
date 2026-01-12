@@ -2,6 +2,9 @@ body {
     margin: 0;
     background-color: black;
 }
+main{
+margin-top: 10vh
+}
 @keyframes test {
     0% {
         opacity: 0;
