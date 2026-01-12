@@ -69,7 +69,6 @@ body {
     animation-duration: 2s;
     animation-iteration-count: 1;
     opacity: 1;
-
 }
 @keyframes textShow{
     from{
@@ -87,7 +86,7 @@ body {
     justify-content: left;
     display: flex;
     height: 50vh;
-    width: 30%;
+    width: 50%;
     background-color: saddlebrown;
     border-radius: 0 4vh 4vh 0;
     border: 1px solid;
@@ -100,7 +99,7 @@ body {
     justify-content: right;
     display: flex;
         height: 50vh;
-    width: 30%;
+    width: 57%;
     background-color: #800000;
     border-radius: 0 4vh 4vh 0;
     border: 1px solid;
@@ -111,7 +110,7 @@ body {
     justify-content: right;
     display: flex;
         height: 50vh;
-    width: 30%;
+    width: 50%;
     background-color: saddlebrown;
     border-radius: 0 4vh 4vh 0;
     border: 1px solid;

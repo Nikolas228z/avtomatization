@@ -1,5 +1,6 @@
 let butonOne = document.getElementById("pageOne");
 let butonTwo = document.getElementById("pageTwo");
+ let reTaxt = document.getElementById("titleOfbook");
 butonOne.addEventListener("click",  e => {
     ChangingLeft(e.target);
 });
