@@ -12,6 +12,7 @@ body {
     min-height: 39vh;
     margin: 35px auto 0;
     padding: 30px;
+
 }
 .title {
     text-align: center;
@@ -112,4 +113,13 @@ footer {
 }
 #red {
     border-radius: 0 15px 15px 0;
+}
+@media(max-width: 1000px){
+    .bigquestion{
+        margin: 0 auto
+    }
+    .metal-buts{
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    }
 }
