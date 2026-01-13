@@ -2,8 +2,11 @@ body {
     margin: 0;
     background-color: black;
 }
-main{
-margin-top: 10vh
+main {
+    margin-top: 57px;
+}
+.navbar {
+    font-size: 17px;
 }
 @keyframes test {
     0% {
@@ -27,7 +30,7 @@ margin-top: 10vh
 }
 .section1 {
     position: relative; /* прив’язка для absolute */
-    height: 80vh;
+    height: 90vh;
     overflow: hidden;
     display: flex;
     border: 20px solid black;
@@ -65,7 +68,7 @@ margin-top: 10vh
     text-align: center;
 }
 .left-up {
-    height: 20%;
+    height: 15%;
     background-color: black;
     border-radius: 0 0 30px 0;
     align-content: center;
@@ -76,7 +79,9 @@ margin-top: 10vh
     text-shadow:
         0 0 2px #00d4ff,
         0 0 22px #00d4ff;
-    font-size: 166%;
+}
+.left-up h4{
+    font-size: 1.6rem;
 }
 @keyframes left-up {
     0% {
@@ -113,9 +118,10 @@ margin-top: 10vh
     width: 100%;
     animation-name: right-up;
     animation-duration: 1.5s;
+        padding: 14px;
 }
-.h-for-right-up{
-    font-size: 14px;
+.h-for-right-up {
+    font-size: 1.2rem;
 }
 @keyframes right-up {
     0% {
@@ -129,7 +135,7 @@ margin-top: 10vh
 }
 .right-down {
     background-color: black;
-    border-radius: 30px 0 0 0 orange;
+    border-radius: 30px 0 0 0;
     align-content: center;
     height: 15%;
     animation-duration: 1.5s;
@@ -155,23 +161,11 @@ margin-top: 10vh
         0 0 10px #00d4ff,
         0 0 20px #00d4ff;
     font-size: 187%;
-    margin-bottom: 10px;
+    margin: 0 0 0 -15%;
     margin-left: 10%;
-    align-content: center
+    padding: 15px 34px 0px 10px;
+    align-content: center;
 }
-
-/* .Moreabtus{
-transition-delay: 1;
-transition-duration: 1.5s;
-width: 50%;
-}
-.Moreabtus:hover{
-color: black;
-background: linear-gradient(135deg, #00c6ff, #0072ff);
-box-shadow: inset 0 -100px 0 0 linear-gradient(135deg, #00c6ff, #0072ff);
-cursor: pointer;
-}
-*/
 
 .div1 {
     background-color: black;
@@ -182,6 +176,7 @@ cursor: pointer;
         0 0 20px #00d4ff;
     font-size: 125%;
     padding: 5%;
+    padding-top: 10px;
     border-radius: 0 20px 0 0;
     text-align: left;
     margin-left: 10%;
@@ -193,17 +188,22 @@ cursor: pointer;
 .Moreabtus {
     padding: 12px 25px;
     border-radius: 12px;
-    border: none;
+    border: solid white;
     cursor: pointer;
     font-size: 18px;
     color: white;
     background: transparent;
     position: relative;
     overflow: hidden;
-
     transition: color 1.5s ease;
 }
-
+.Moreabtus h3 {
+    margin: 0 !important;
+}
+.Moreabtus a {
+    color: white;
+    text-decoration: none;
+}
 /* Псевдоелемент — градієнт, який плавно проявляється */
 .Moreabtus::before {
     content: "";
@@ -213,10 +213,6 @@ cursor: pointer;
     opacity: 0; /* спочатку невидимий */
     transition: opacity 1.5s ease;
     z-index: -1;
-}
-
-.Moreabtus:hover {
-    color: black;
 }
 
 .Moreabtus:hover::before {

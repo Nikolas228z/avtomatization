@@ -3,6 +3,9 @@ header {
     top: 0;
     align-content: center;
 }
+main{
+    margin-top: 78px;
+}
 h1,
 h3 {
     font-family: "Science Gothic", sans-serif;
@@ -12,30 +15,6 @@ h3 {
 }
 .h4 {
     font-weight: 1000;
-}
-.navbar {
-    position: sticky;
-    top: 0;
-    display: flex;
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
-
-    border-radius: 36vh;
-}
-.navbar a {
-    text-decoration: none;
-    color: black;
-}
-.navbar ul {
-    position: sticky;
-    top: 0;
-    display: flex;
-    justify-content: space-around;
-    list-style-type: none;
-}
-.navbar ul li {
-    position: sticky;
-    top: 0;
-    width: 20vw;
 }
 .black-button {
     background-color: rgba(255, 255, 255, 0.16);
@@ -76,21 +55,22 @@ body {
 }
 .title {
     text-align: center;
-    font-size: 3vh;
+    font-size: 2rem;
     color: #8c9ebe;
     width: 90%;
     margin: 40px;
 }
 .div-wth-info {
-    margin: 0 13% 0 13%;
+    margin: 0 13% 0 0%;
     width: 100%;
     display: flex;
-    gap: 7%;
+    justify-content: space-around;
 }
 .two-down {
-    margin: 1% 0 5% 26%;
+    margin: 1% 0 5% 0%;
     width: 100%;
     align-content: center;
+    justify-content: space-around;
     display: flex;
     gap: 3%;
 }
@@ -106,10 +86,10 @@ body {
     height: 50vh;
     object-fit: cover;
     transition: all 0.5s ease;
-    transform: scale(2);
+
 }
 .overlay {
-    transform: scaleX(2);
+    text-align: center;
     position: absolute;
     top: 0;
     left: 0;
