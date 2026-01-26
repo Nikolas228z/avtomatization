@@ -39,9 +39,21 @@ body{
 .for-down-marg{
     margin: 0 0 5% 0;
 }
-@media (max-width: 1200px){
+@media (max-width: 1000px){
+    .navbar
+    {
+        margin: 0!important;
+    }
     #uncouples-1,#uncouples-2,#uncouples-3{
-
+    flex-direction: column-reverse;
+    }
+    .up-img{
+    width: 90%;
+        margin: 10px auto;
+    }
+    .down-img{
+    width: 90%;
+        margin: 10px auto;
     }
     #couples-1,#couples-2{
     flex-direction: column
