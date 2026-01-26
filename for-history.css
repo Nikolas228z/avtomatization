@@ -39,3 +39,11 @@ body{
 .for-down-marg{
     margin: 0 0 5% 0;
 }
+@media (max-width: 1200px){
+    #uncouples-1,#uncouples-2,#uncouples-3{
+
+    }
+    #couples-1,#couples-2{
+    flex-direction: column
+    }
+}
