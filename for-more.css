@@ -54,7 +54,7 @@ body {
 }
 .one-img {
     width: 30%;
-    height: 35vh;
+    height: 30vh;
     border-radius: 4vh;
 }
 .one-img:hover {
@@ -79,6 +79,7 @@ body {
 .for-center {
     text-align: center;
     height: 80vh;
+    display: none;
 }
 .for-center div {
     align-content: center;
@@ -108,7 +109,7 @@ body {
     transform: translateY(-27vh);
 }
 .div-wht-dis {
-    display: flex;
+    display: none;
 }
 .div-wht-dis2 {
     display: flex;
@@ -204,9 +205,25 @@ body {
 }
 .pos-for-div {
     align-content: center;
-    margin-right: 3%;
+
 }
 
-.for-down-marg {
-    margin-bottom: 5%;
+@media (max-width: 1200px){
+    .for-text, .text{
+    font-size: 36px
+    }
+    .text{
+    width: 40vh;
+    }
+    .one-img{
+    width: 30vh;
+    height: 20vh;
+    }
+    .div-wht-dis{
+    flex-direction: column
+    }
+    .pos-for-vid{
+    margin-right: 0;
+    }
+
 }
