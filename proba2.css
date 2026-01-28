@@ -7,6 +7,7 @@ main {
 }
 .navbar {
     font-size: 23px;
+
 }
 @keyframes test {
     0% {
@@ -67,7 +68,7 @@ main {
     text-align: center;
 }
 .left-up {
-    height: 20%;
+    height: 15%;
     background-color: black;
     border-radius: 0 0 30px 0;
     align-content: center;
@@ -78,7 +79,9 @@ main {
     text-shadow:
         0 0 2px #00d4ff,
         0 0 22px #00d4ff;
-    font-size: 166%;
+}
+.left-up h4{
+    font-size: 1.6rem;
 }
 @keyframes left-up {
     0% {
@@ -116,6 +119,7 @@ main {
     height: 20vh;
     animation-name: right-up;
     animation-duration: 1.5s;
+        padding: 14px;
 }
 .h-for-right-up {
     font-size: 25px;
@@ -174,6 +178,7 @@ main {
         0 0 20px #00d4ff;
     font-size: 125%;
     padding: 5%;
+    padding-top: 10px;
     border-radius: 0 20px 0 0;
     text-align: left;
     margin-left: 10%;
@@ -194,7 +199,13 @@ main {
     overflow: hidden;
     transition: color 1.5s ease;
 }
-
+.Moreabtus h3 {
+    margin: 0 !important;
+}
+.Moreabtus a {
+    color: white;
+    text-decoration: none;
+}
 /* Псевдоелемент — градієнт, який плавно проявляється */
 .Moreabtus::before {
     content: "";
@@ -204,10 +215,6 @@ main {
     opacity: 0; /* спочатку невидимий */
     transition: opacity 1s ease;
     z-index: -1;
-}
-
-.Moreabtus:hover {
-    color: black;
 }
 
 .Moreabtus:hover::before {
