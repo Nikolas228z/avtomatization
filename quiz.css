@@ -1,110 +1,265 @@
+/* ================= RESET ================= */
 * {
     box-sizing: border-box;
 }
 
+/* ================= BODY ================= */
 body {
-    font-family: Arial, sans-serif;
-    background: #000;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: radial-gradient(circle at top, #0b1020, #000);
     margin: 0;
     color: white;
 }
 
+/* ================= LAYOUT ================= */
 .general-sec {
     display: flex;
     min-height: 100vh;
 }
 
+/* ================= SIDE IMAGES ================= */
 .general-div-1 {
     width: 25%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 20px;
 }
 
 .general-div-1 img {
     width: 100%;
+    opacity: 0.85;
+    transition:
+        transform 0.6s ease,
+        opacity 0.4s ease;
 }
 
+.general-div-1 img:hover {
+    transform: scale(1.07);
+    opacity: 1;
+}
+
+/* ================= CENTER ================= */
 .start {
     width: 50%;
     min-height: 100vh;
-    padding: 30px;
+    padding: 40px 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    background: rgba(23, 30, 60, 0.75);
+    backdrop-filter: blur(6px);
+
+    box-shadow:
+        inset 0 0 30px rgba(255, 255, 255, 0.03),
+        0 0 40px rgba(50, 72, 220, 0.25);
+
+    animation: fadeUp 0.8s ease;
 }
 
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= QUESTION ================= */
 .text-for-quiz {
-    min-height: 120px;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
 }
 
 #question {
     text-align: center;
-    font-size: 26px;
+    font-size: 28px;
+    line-height: 1.4;
+    text-shadow: 0 0 10px rgba(120, 140, 255, 0.6);
 }
 
+/* ================= NOTE ================= */
 .nothtwo {
     text-align: center;
     margin-bottom: 20px;
+    opacity: 0.75;
+    letter-spacing: 1px;
 }
 
+/* ================= ANSWERS ================= */
 .div-for-buts {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    width: 100%;
 }
 
 .metal-buts {
-    width: 48%;
-    padding: 14px;
+    padding: 16px;
     font-size: 16px;
-    border-radius: 12px;
-    border: none;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
     cursor: pointer;
-    background: linear-gradient(145deg, #e6e6e6, #bdbdbd);
-    color: #111;
-    transition: transform 0.2s, box-shadow 0.2s;
+    color: white;
+
+    background: linear-gradient(145deg, #141a35, #0b1022);
+    position: relative;
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+/* hover light sweep */
+.metal-buts::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.18), transparent);
+    transform: translateX(-100%);
+}
+
+.metal-buts:hover::before {
+    transform: translateX(100%);
+    transition: transform 0.7s;
 }
 
 .metal-buts:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(255,255,255,0.15);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(120, 140, 255, 0.25);
 }
 
+/* ================= STATES (JS класи) ================= */
+.correct {
+    background: linear-gradient(145deg, #00ff9c, #00b86b) !important;
+    color: #002014;
+    animation: pulse 0.4s;
+}
+
+.wrong {
+    background: linear-gradient(145deg, #ff5c5c, #b10000) !important;
+    animation: shake 0.4s;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.08);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-6px);
+    }
+    50% {
+        transform: translateX(6px);
+    }
+    75% {
+        transform: translateX(-6px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* ================= START BUTTON ================= */
 #button {
-    margin-top: 25px;
-    width: 220px;
+    margin-top: 30px;
+    width: 240px;
+    padding: 16px;
+    font-size: 18px;
+    border-radius: 24px;
+    border: none;
+    cursor: pointer;
+
+    background: linear-gradient(145deg, #7aa2ff, #a855ff);
+    color: #050505;
+    font-weight: 600;
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
 }
 
+#button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(168, 85, 255, 0.4);
+}
+
+/* ================= MENU ================= */
 #menuforquestions {
     display: none;
     margin-top: 20px;
+    width: 100%;
 }
 
+/* ================= PROGRESS ================= */
 .twodivs {
     display: flex;
     width: 100%;
-    margin-top: 20px;
-}
-
-#green, #red {
-    height: 10px;
-    width: 50%;
+    height: 12px;
+    margin-top: 25px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1);
 }
 
 #green {
-    background: linear-gradient(to right, #4caf50, #81c784);
-    border-radius: 15px 0 0 15px;
+    width: 0%;
+    background: linear-gradient(to right, #00ff9c, #00b86b);
+    transition: width 0.4s ease;
 }
 
 #red {
-    background: linear-gradient(to right, #f44336, #e57373);
-    border-radius: 0 15px 15px 0;
+    width: 0%;
+    background: linear-gradient(to right, #ff5c5c, #b10000);
+    transition: width 0.4s ease;
 }
 
+/* ================= RESULT ================= */
 #result {
-    margin-top: 15px;
-    font-size: 18px;
+    margin-top: 20px;
+    font-size: 20px;
     font-weight: bold;
+    text-align: center;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .general-sec {
+        flex-direction: column;
+         min-height: auto;
+    }
+
+    .general-div-1 {
+        display: none;
+    }
+
+    .start {
+        width: 100%;
+           min-height: auto;
+    }
+
+    .div-for-buts {
+        grid-template-columns: 1fr;
+    }
+    footer {
+        width: 21%;
+    }
 }
