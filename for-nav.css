@@ -33,6 +33,7 @@ header {
 }
 @media (max-width: 992px) {
     .navbar {
+      font-size: 4.2rem;
         min-height: 120px;
     }
 
