@@ -64,8 +64,8 @@ svg {
     font-size: 35px;
   }
   footer {
-    width: 79vh;
-    padding: 131px;
+    width: 100%;
+
   }
   .logo {
     width: 163%;

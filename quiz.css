@@ -1,117 +1,319 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: black;
+/* ================= RESET ================= */
+* {
+    box-sizing: border-box;
+}
 
+/* ================= BODY ================= */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: radial-gradient(circle at top, #0b1020, #000);
     margin: 0;
-}
-.bigquestion {
-    background-color: gray;
-    border: 10px solid #8d95f5;
-    text-align: center;
-    width: 54%;
-    min-height: 39vh;
-    margin: 35px auto 0;
-    padding: 30px;
-}
-.title {
-    text-align: center;
     color: white;
 }
-h2 {
-    margin-bottom: 20px;
+
+/* ================= LAYOUT ================= */
+.general-sec {
+    display: flex;
+    min-height: 100vh;
 }
-.metal {
-    background: linear-gradient(135deg, #f2f2f2, #cfcfcf, #9e9e9e, #e6e6e6);
-    margin: 17px auto;
-}
-.metal-buts {
-    width: 71%;
-    border-radius: 22px;
-    padding: 12px;
-    margin: 0 auto;
-    gap: 20px;
-    font-size: 20px;
-}
-#menuforquestions {
-    display: none;
-}
-.div-for-buts {
+
+/* ================= SIDE IMAGES ================= */
+.general-div-1 {
+    width: 25%;
     display: flex;
     flex-direction: column;
-    width: 61%;
-    margin: 0 auto;
-    gap: 4px;
+    justify-content: space-between;
+    padding: 20px;
 }
-.robot {
+
+.general-div-1 img {
     width: 100%;
-    transform: translateY(118deg);
+    opacity: 0.85;
+    transition:
+        transform 0.6s ease,
+        opacity 0.4s ease;
 }
 
-.question {
-    background: #fff;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    align-content: center;
+.general-div-1 img:hover {
+    transform: scale(1.07);
+    opacity: 1;
 }
-.answers button {
-    margin: 5px;
-    padding: 8px 15px;
-    border: none;
-    border-radius: 6px;
+
+/* ================= CENTER ================= */
+.start {
+    width: 50%;
+    min-height: 100vh;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: rgba(23, 30, 60, 0.75);
+    backdrop-filter: blur(6px);
+
+    box-shadow:
+        inset 0 0 30px rgba(255, 255, 255, 0.03),
+        0 0 40px rgba(50, 72, 220, 0.25);
+
+    animation: fadeUp 0.8s ease;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= QUESTION ================= */
+.text-for-quiz {
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+}
+
+#question {
+    text-align: center;
+    font-size: 28px;
+    line-height: 1.4;
+    text-shadow: 0 0 10px rgba(120, 140, 255, 0.6);
+}
+
+/* ================= NOTE ================= */
+.nothtwo {
+    text-align: center;
+    margin-bottom: 20px;
+    opacity: 0.75;
+    letter-spacing: 1px;
+}
+
+/* ================= ANSWERS ================= */
+.div-for-buts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    width: 100%;
+}
+
+.metal-buts {
+    padding: 16px;
+    font-size: 16px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
     cursor: pointer;
-    background: #e0e0e0;
-    align-content: center;
+    color: white;
+
+    background: linear-gradient(145deg, #141a35, #0b1022);
+    position: relative;
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
 }
 
-.answers button:hover {
-    background: #d0d0d0;
+/* hover light sweep */
+.metal-buts::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.18), transparent);
+    transform: translateX(-100%);
 }
 
-.answers button.selected {
-    background: #b3d9ff;
+.metal-buts:hover::before {
+    transform: translateX(100%);
+    transition: transform 0.7s;
 }
 
-.answers button.correct {
-    background: #9be29b;
+.metal-buts:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(120, 140, 255, 0.25);
 }
 
-.answers button.wrong {
-    background: #f7a1a1;
+/* ================= STATES (JS класи) ================= */
+.correct {
+    background: linear-gradient(145deg, #00ff9c, #00b86b) !important;
+    color: #002014;
+    animation: pulse 0.4s;
 }
 
-button.submit {
-    display: block;
-    margin-top: 10px;
-    padding: 8px 15px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    background: #cccccc;
+.wrong {
+    background: linear-gradient(145deg, #ff5c5c, #b10000) !important;
+    animation: shake 0.4s;
 }
 
-button.submit:disabled {
-    background: #aaaaaa;
-    cursor: not-allowed;
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.08);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
-#result {
-    margin-top: 20px;
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-6px);
+    }
+    50% {
+        transform: translateX(6px);
+    }
+    75% {
+        transform: translateX(-6px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* ================= START BUTTON ================= */
+#button {
+    margin-top: 30px;
+    width: 240px;
+    padding: 16px;
     font-size: 18px;
-    font-weight: bold;
+    border-radius: 24px;
+    border: none;
+    cursor: pointer;
+
+    background: linear-gradient(145deg, #7aa2ff, #a855ff);
+    color: #050505;
+    font-weight: 600;
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
 }
-footer {
-    border-top: inset #8d95f5;
+
+#button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(168, 85, 255, 0.4);
 }
+
+/* ================= MENU ================= */
+#menuforquestions {
+    display: none;
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* ================= PROGRESS ================= */
 .twodivs {
     display: flex;
+    width: 100%;
+    height: 12px;
+    margin-top: 25px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1);
 }
+
 #green {
-    border-radius: 15px 0 0 15px;
+    width: 0%;
+    background: linear-gradient(to right, #00ff9c, #00b86b);
+    transition: width 0.4s ease;
 }
+
 #red {
-    border-radius: 0 15px 15px 0;
+    width: 0%;
+    background: linear-gradient(to right, #ff5c5c, #b10000);
+    transition: width 0.4s ease;
+}
+
+/* ================= RESULT ================= */
+#result {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+/* ================= MOBILE ONLY ================= */
+@media (max-width: 768px) {
+    /* головний layout */
+    .general-sec {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    /* бокові картинки ховаємо */
+    .general-div-1 {
+        display: none;
+    }
+
+    /* центр на весь екран */
+    .start {
+        width: 100%;
+        padding: 20px 16px;
+        border-radius: 0;
+        min-height: auto;
+    }
+
+    /* прибрати зайву висоту питання */
+    .text-for-quiz {
+        min-height: auto;
+        margin-bottom: 10px;
+    }
+
+    #question {
+        font-size: 20px;
+    }
+
+    /* кнопки в одну колонку */
+    .div-for-buts {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .metal-buts {
+        width: 100%;
+        font-size: 15px;
+        padding: 14px;
+    }
+
+    /* старт кнопка на всю ширину */
+    #button {
+        width: 100%;
+    }
+
+    /* прогрес компактний */
+    .twodivs {
+        margin-top: 18px;
+        height: 10px;
+    }
+
+    /* футер НІКОЛИ не 21% */
+    footer {
+        width: 100%;
+        padding: 20px 15px;
+    }
+
+    /* контакти в колонку */
+    .div-wht-dis {
+        flex-direction: column;
+        gap: 4px;
+        text-align: center;
+    }
+
+    .three-logo {
+        justify-content: center;
+    }
+
+    .logo {
+        max-width: 120px;
+        margin: 0 auto;
+    }
 }
 @media (max-width: 1200px){
     #answer1, #answer2, #answer3, #answer4{
