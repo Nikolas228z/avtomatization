@@ -14,6 +14,9 @@ body{
         border-radius: 2vh;
     box-shadow: 1px 3px 96px rgba(42, 82, 152, 0.41);
 }
+.itemsCenter{
+    align-content: center;
+}
 .down-img{
     width: 40%;
     margin-right: 7%;
