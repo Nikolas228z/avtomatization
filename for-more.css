@@ -54,7 +54,7 @@ body {
 }
 .one-img {
     width: 30%;
-    height: 35vh;
+    height: 30vh;
     border-radius: 4vh;
 }
 .one-img:hover {
@@ -107,9 +107,7 @@ body {
     margin: 111px auto 0 auto;
     transform: translateY(-27vh);
 }
-.div-wht-dis {
-    display: flex;
-}
+
 .div-wht-dis2 {
     display: flex;
 
@@ -204,9 +202,79 @@ body {
 }
 .pos-for-div {
     align-content: center;
-    margin-right: 3%;
 }
 
-.for-down-marg {
-    margin-bottom: 5%;
+/* ===================================== */
+/* ====== НАПРЯМКИ (DESKTOP) ============ */
+/* ===================================== */
+
+/* за замовчуванням мобільна секція вимкнена */
+.for-sec-mobile {
+    display: none;
+}
+
+/* ===================================== */
+/* ====== МОБІЛЬНА ВЕРСІЯ ≤1200px ======= */
+/* ===================================== */
+
+@media (max-width: 1200px) {
+    /* ховаємо комп'ютерну версію */
+    .for-sec {
+        display: none;
+    }
+    .for-text {
+        font-size: 2rem;
+    }
+    .one-img {
+        display: block;
+        margin: 0 auto;
+        width: 75%;
+    }
+    /* показуємо мобільну */
+    .for-sec-mobile {
+        display: block;
+        padding: 40px 20px;
+    }
+
+    .for-sec-mobile .title {
+        font-size: 2.2rem;
+        margin-bottom: 30px;
+    }
+
+    /* список */
+    .automation-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;
+        max-width: 500px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .automation-list li {
+        background: linear-gradient(135deg, #1e3640, #2a5462, #2390be);
+        color: #ffffff;
+        padding: 18px 20px;
+        border-radius: 18px;
+        font-size: 2rem;
+        font-weight: 500;
+        text-align: center;
+        letter-spacing: 0.5px;
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        box-shadow: 0 10px 40px rgba(42, 82, 152, 0.35);
+        margin-bottom: 10px;
+    }
+    .for-img {
+        height: 100%;
+        width: 100%;
+    }
+    .text {
+        font-size: 40px;
+    }
+    .forvid {
+        width: 40%;
+    }
+    .div-wht-dis {
+        display: block !important;
+    }
 }

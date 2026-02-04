@@ -2,8 +2,12 @@ body {
     margin: 0;
     background-color: black;
 }
-main{
-margin-top: 10vh
+main {
+    margin-top: 4%;
+}
+.navbar {
+    font-size: 23px;
+
 }
 @keyframes test {
     0% {
@@ -21,13 +25,12 @@ margin-top: 10vh
     object-fit: cover;
     z-index: -1;
     width: 100%;
-    z-index: -1;
     animation-name: test;
     animation-duration: 1s;
 }
 .section1 {
     position: relative; /* прив’язка для absolute */
-    height: 80vh;
+    height: 90vh;
     overflow: hidden;
     display: flex;
     border: 20px solid black;
@@ -65,7 +68,7 @@ margin-top: 10vh
     text-align: center;
 }
 .left-up {
-    height: 20%;
+    height: 15%;
     background-color: black;
     border-radius: 0 0 30px 0;
     align-content: center;
@@ -76,7 +79,9 @@ margin-top: 10vh
     text-shadow:
         0 0 2px #00d4ff,
         0 0 22px #00d4ff;
-    font-size: 166%;
+}
+.left-up h4{
+    font-size: 1.6rem;
 }
 @keyframes left-up {
     0% {
@@ -111,11 +116,14 @@ margin-top: 10vh
     background-color: black;
     border-radius: 0 0 0 30px;
     width: 100%;
+    height: 20vh;
     animation-name: right-up;
     animation-duration: 1.5s;
+        padding: 14px;
 }
-.h-for-right-up{
-    font-size: 14px;
+.h-for-right-up {
+    font-size: 25px;
+    margin: 2% 0 0 2%;
 }
 @keyframes right-up {
     0% {
@@ -129,7 +137,7 @@ margin-top: 10vh
 }
 .right-down {
     background-color: black;
-    border-radius: 30px 0 0 0 orange;
+    border-radius: 30px 0 0 0;
     align-content: center;
     height: 15%;
     animation-duration: 1.5s;
@@ -155,23 +163,11 @@ margin-top: 10vh
         0 0 10px #00d4ff,
         0 0 20px #00d4ff;
     font-size: 187%;
-    margin-bottom: 10px;
-    margin-left: 10%;
-    align-content: center
+    margin: 0 0 0 -15%;
+    transform: translateY(2vh);
+    padding: 1vh;
+    align-content: center;
 }
-
-/* .Moreabtus{
-transition-delay: 1;
-transition-duration: 1.5s;
-width: 50%;
-}
-.Moreabtus:hover{
-color: black;
-background: linear-gradient(135deg, #00c6ff, #0072ff);
-box-shadow: inset 0 -100px 0 0 linear-gradient(135deg, #00c6ff, #0072ff);
-cursor: pointer;
-}
-*/
 
 .div1 {
     background-color: black;
@@ -182,6 +178,7 @@ cursor: pointer;
         0 0 20px #00d4ff;
     font-size: 125%;
     padding: 5%;
+    padding-top: 10px;
     border-radius: 0 20px 0 0;
     text-align: left;
     margin-left: 10%;
@@ -193,17 +190,22 @@ cursor: pointer;
 .Moreabtus {
     padding: 12px 25px;
     border-radius: 12px;
-    border: none;
+    border: solid white;
     cursor: pointer;
     font-size: 18px;
     color: white;
     background: transparent;
     position: relative;
     overflow: hidden;
-
     transition: color 1.5s ease;
 }
-
+.Moreabtus h3 {
+    margin: 0 !important;
+}
+.Moreabtus a {
+    color: white;
+    text-decoration: none;
+}
 /* Псевдоелемент — градієнт, який плавно проявляється */
 .Moreabtus::before {
     content: "";
@@ -211,14 +213,72 @@ cursor: pointer;
     inset: 0;
     background: linear-gradient(135deg, #00c6ff, #0072ff);
     opacity: 0; /* спочатку невидимий */
-    transition: opacity 1.5s ease;
+    transition: opacity 1s ease;
     z-index: -1;
-}
-
-.Moreabtus:hover {
-    color: black;
 }
 
 .Moreabtus:hover::before {
     opacity: 1; /* плавно проявляємо фон */
+}
+@media (max-width: 1000px) {
+    .section1 {
+        display: flex;
+        flex-wrap: wrap;
+        height: 100vh;
+    }
+    .left {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        height: 90%;
+    }
+    .right {
+        transform: translateY(14vh);
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        height: 87%;
+    }
+    .left-up {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .left-up h4 {
+        margin: 0 auto;
+        font-size: 3.5rem;
+    }
+    .right-up {
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+         border-radius: 0;
+    }
+    .h-for-right-up {
+        margin-top: 5%;
+        font-size: 1.7rem;
+    }
+    .img-form{
+        transform: translateY(35vh);
+    height: 40vh;
+        width: 100%;;
+    }
+    .div1{
+        text-align: center;
+        margin: 0;
+        padding: 5% 0;
+    }
+    .ittech{
+        margin-right: 20%;
+        font-size: 2.5rem;
+
+    }
+    .avtomatization{
+        margin: 0;
+        font-size: 3.7rem;
+    }
+    .Moreabtus{
+        padding: 5% 25%;
+        font-size: 1.7rem;
+    }
 }
