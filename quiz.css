@@ -239,27 +239,79 @@ body {
     font-weight: bold;
     text-align: center;
 }
-
-/* ================= RESPONSIVE ================= */
+/* ================= MOBILE ONLY ================= */
 @media (max-width: 768px) {
+    /* головний layout */
     .general-sec {
         flex-direction: column;
-         min-height: auto;
+        min-height: auto;
     }
 
+    /* бокові картинки ховаємо */
     .general-div-1 {
         display: none;
     }
 
+    /* центр на весь екран */
     .start {
         width: 100%;
-           min-height: auto;
+        padding: 20px 16px;
+        border-radius: 0;
+        min-height: auto;
     }
 
+    /* прибрати зайву висоту питання */
+    .text-for-quiz {
+        min-height: auto;
+        margin-bottom: 10px;
+    }
+
+    #question {
+        font-size: 20px;
+    }
+
+    /* кнопки в одну колонку */
     .div-for-buts {
         grid-template-columns: 1fr;
+        gap: 12px;
     }
+
+    .metal-buts {
+        width: 100%;
+        font-size: 15px;
+        padding: 14px;
+    }
+
+    /* старт кнопка на всю ширину */
+    #button {
+        width: 100%;
+    }
+
+    /* прогрес компактний */
+    .twodivs {
+        margin-top: 18px;
+        height: 10px;
+    }
+
+    /* футер НІКОЛИ не 21% */
     footer {
-        width: 21%;
+        width: 100%;
+        padding: 20px 15px;
+    }
+
+    /* контакти в колонку */
+    .div-wht-dis {
+        flex-direction: column;
+        gap: 4px;
+        text-align: center;
+    }
+
+    .three-logo {
+        justify-content: center;
+    }
+
+    .logo {
+        max-width: 120px;
+        margin: 0 auto;
     }
 }
