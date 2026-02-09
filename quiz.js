@@ -15,6 +15,7 @@ let div2 = document.getElementById("div2");
 let green = document.getElementById("green");
 let red = document.getElementById("red");
 let div3 = document.getElementById("menuforquestions");
+let main = document.getElementById("main");
 const questions = [
     {
         id: 1,
@@ -163,6 +164,10 @@ function start() {
     answer3.disabled = false;
     answer4.disabled = false;
     button.style.display = "none";
+    /*     p.style.display = "none";
+    red.style.display = "none";
+    green.style.display = "none";
+*/
 }
 /*function ned() {
     question.textContent = questions[currentQuestion].name;
@@ -181,12 +186,16 @@ function finish() {
     question.style.display = "none";
     let forGreen = score * allquestion;
     let forRed = 100 - forGreen;
+    main.style.minHeight = "65vh";
     console.log(forGreen);
-    console.log(forRed);
+    /*   button.style.display = "block";
+    button.textContent = "Попробувати знову?";
+    */ console.log(forRed);
     green.style.background = "green";
     red.style.background = "red";
     green.style.width = forGreen + "%";
     red.style.width = forRed + "%";
     div2.style.height = "5vh";
-    p.textContent = "Your score:" + score + " Answered correct:" + score;
+    p.textContent = "   Кількість баллів:     " + score + ";" + "        Правильних відповідей:      " + score + ";";
+    p.style.fontSize = "38px";
 }
