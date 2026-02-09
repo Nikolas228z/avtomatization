@@ -23,6 +23,7 @@ h3 {
     height: 5vh;
     width: 57%;
 }
+
 .black-button:hover {
     background-color: black;
     border: solid black;
@@ -178,7 +179,9 @@ h4 {
         text-align: center;
     }
 
-
+    .spa{
+        display: none;
+    }
     .two-down {
         flex-wrap: wrap;
         display: flex;
