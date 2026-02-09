@@ -145,7 +145,7 @@ function check(button, correct) {
 }
 function chc() {
     for (i = 0; i < buttons.length; i = i + 1) {
-        buttons[i].style.background = "linear-gradient(135deg, #f2f2f2, #cfcfcf, #9e9e9e, #e6e6e6)";
+        buttons[i].style.background = "transparent";
     }
 }
 function start() {

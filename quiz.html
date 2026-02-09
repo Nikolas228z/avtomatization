@@ -2,19 +2,76 @@
 <html lang="uk">
     <head>
         <meta charset="UTF-8" />
-        <title>Тест</title>
+
+        <title>МО | Вікторина</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
         <link rel="stylesheet" href="quiz.css" />
         <link rel="stylesheet" href="for-foot.css" />
+        <link rel="stylesheet" href="for-nav.css" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+            crossorigin="anonymous" />
     </head>
     <body>
-        <header></header>
-       <main>
-            <section class="general-sec">
 
-                <div id="div" class="bigquestion">
-                    <h1 id="question"></h1>
-                    <div id="menuforquestions" class="mfq">
-                        <h2 class="nothtwo" id="h2"></h2>
+        <header>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown"
+                        aria-controls="navbarNavDropdown"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="index.html">Загальне</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="personal2.html">Циклова комісія</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="history.html">Історія</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="quiz.html">Вікторина</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    
+        <main>
+            <section class="general-sec">
+                <div class="general-div-1">
+                    <div class="yellowelectic">
+                        <img
+                            src="avtomatization/png-transparent-electricity-electric-power-electrical-engineering-others-miscellaneous-angle-text-thumbnail-removebg-preview.png" />
+                    </div>
+                    <div class="electicmen">
+                        <img
+                            src="avtomatization/png-clipart-electrician-illustration-electrical-safety-electricity-electrical-engineering-electrician-animation-miscellaneous-electrical-contractor-thumbnail-removebg-preview.png" />
+                    </div>
+                </div>
+                <div id="div" class="start">
+                    <div class="text-for-quiz"><h1 id="question"></h1></div>
+                    <div id="menuforquestions">
+                        <h2 class="nothtwo" id="h2">ВИБЕРІТЬ ЛИШЕ ОДНУ ВІДПОВІДЬ!</h2>
                         <div class="div-for-buts">
                             <button onclick="check(this, 1)" id="answer1" class="metal-buts"></button>
                             <button onclick="check(this, 2)" id="answer2" class="metal-buts"></button>
@@ -26,13 +83,21 @@
                         <div id="green"></div>
                         <div id="red"></div>
                     </div>
-                    <button id="button" class="metal-buts" onclick="start()">Start quiz</button>
+                    <button id="button" class="metal-buts" onclick="start()">Почати вікторину</button>
                     <p id="result"></p>
                 </div>
-                <img class="robot" src="robotPHOTO/b3b6cdb3-e5e9-480a-861e-9b3ddfe54fd7%20-%20Edited.png" />
+                <div class="general-div-1">
+                    <div class="electicBOARD">
+                        <img
+                            src="avtomatization/png-transparent-electricity-symbol-electrician-electrical-engineering-black-and-white-line-area-circle-silhouette-removebg-preview.png" />
+                    </div>
+                    <div class="yellowelectic">
+                        <img src="https://cdn-icons-png.flaticon.com/512/8188/8188078.png" />
+                    </div>
+                </div>
             </section>
         </main>
-        <!--<footer>
+        <footer>
             <div class="div-wht-dis">
                 <div class="for-marg">
                     <p class="litle-title">Наші контакти:</p>
@@ -76,7 +141,6 @@
                         </p>
                     </div>
                 </div>
-
                 <div class="three-logo">
                     <a href="#">
                         <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -95,7 +159,6 @@
                             </defs>
                         </svg>
                     </a>
-
                     <a>
                         <img
                             src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzMiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMyAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48bWFzayBpZD0iYSIgc3R5bGU9Im1hc2stdHlwZTpsdW1pbmFuY2UiIG1hc2tVbml0cz0idXNlclNwYWNlT25Vc2UiIHg9IjAiIHk9IjAiIHdpZHRoPSIzMyIgaGVpZ2h0PSIzMiI+PHBhdGggZD0iTTE2LjY2NiAyLjg4MmM0LjI3MyAwIDQuNzc5LjAxNiA2LjQ2Ni4wOTQgMS41Ni4wNyAyLjQwNy4zMzEgMi45NzEuNTUuNzQ3LjI5IDEuMjguNjM3IDEuODQgMS4xOTdzLjkwNyAxLjA5MyAxLjE5NyAxLjg0Yy4yMTkuNTY0LjQ4IDEuNDEuNTUgMi45Ny4wNzcgMS42ODguMDkzIDIuMTk0LjA5MyA2LjQ2NiAwIDQuMjczLS4wMTYgNC43NzktLjA5MyA2LjQ2Ni0uMDcgMS41Ni0uMzMxIDIuNDA3LS41NSAyLjk3YTQuOTU2IDQuOTU2IDAgMDEtMS4xOTcgMS44NGMtLjU2LjU2LTEuMDkzLjkwOC0xLjg0IDEuMTk3LS41NjQuMjItMS40MS40OC0yLjk3MS41NTEtMS42ODcuMDc3LTIuMTkzLjA5My02LjQ2Ni4wOTMtNC4yNzIgMC00Ljc3OC0uMDE2LTYuNDY1LS4wOTMtMS41Ni0uMDcxLTIuNDA3LS4zMzEtMi45NzEtLjU1YTQuOTYgNC45NiAwIDAxLTEuODQtMS4xOTcgNC45NTIgNC45NTIgMCAwMS0xLjE5Ni0xLjg0Yy0uMjItLjU2NC0uNDgtMS40MTEtLjU1MS0yLjk3MS0uMDc3LTEuNjg3LS4wOTMtMi4xOTMtLjA5My02LjQ2NiAwLTQuMjcyLjAxNi00Ljc3OC4wOTMtNi40NjUuMDctMS41Ni4zMzEtMi40MDcuNTUtMi45NzFhNC45NjYgNC45NjYgMCAwMTEuMTk3LTEuODQgNC45NTIgNC45NTIgMCAwMTEuODQtMS4xOTdjLjU2NC0uMjE5IDEuNDEtLjQ4IDIuOTcxLS41NSAxLjY4Ny0uMDc3IDIuMTkzLS4wOTQgNi40NjUtLjA5NHptMC0yLjg4MmMtNC4zNDUgMC00Ljg5LjAxOS02LjU5Ni4wOTZDOC4zNjYuMTc0IDcuMjA0LjQ0NCA2LjE4Ni44NGE3Ljg0NiA3Ljg0NiAwIDAwLTIuODM0IDEuODQ2IDcuODM5IDcuODM5IDAgMDAtMS44NDYgMi44MzNDMS4xMTEgNi41MzcuODQgNy43Ljc2MyA5LjQwMy42ODUgMTEuMTEuNjY3IDExLjY1NS42NjcgMTZjMCA0LjM0NS4wMTggNC44OS4wOTYgNi41OTcuMDc3IDEuNzAzLjM0OCAyLjg2Ni43NDMgMy44ODNhNy44NDYgNy44NDYgMCAwMDEuODQ2IDIuODM0IDcuODUgNy44NSAwIDAwMi44MzQgMS44NDZjMS4wMTguMzk2IDIuMTguNjY2IDMuODg0Ljc0NCAxLjcwNi4wNzcgMi4yNTEuMDk2IDYuNTk2LjA5NiA0LjM0NiAwIDQuODktLjAxOSA2LjU5Ny0uMDk2IDEuNzA0LS4wNzggMi44NjYtLjM0OSAzLjg4NC0uNzQ0YTcuODQ4IDcuODQ4IDAgMDAyLjgzNC0xLjg0NiA3Ljg1IDcuODUgMCAwMDEuODQ1LTIuODM0Yy4zOTYtMS4wMTcuNjY3LTIuMTguNzQ0LTMuODgzLjA3OC0xLjcwNy4wOTYtMi4yNTIuMDk2LTYuNTk3IDAtNC4zNDUtLjAxOC00Ljg5LS4wOTYtNi41OTctLjA3Ny0xLjcwMy0uMzQ4LTIuODY2LS43NDQtMy44ODRhNy44NDggNy44NDggMCAwMC0xLjg0NS0yLjgzM0E3Ljg1MSA3Ljg1MSAwIDAwMjcuMTQ3Ljg0QzI2LjEyOS40NDQgMjQuOTY2LjE3NCAyMy4yNjMuMDk2IDIxLjU1Ny4wMiAyMS4wMTIgMCAxNi42NjYgMHptMCA3Ljc4NEE4LjIxNiA4LjIxNiAwIDEwMjQuODgyIDE2YTguMjE2IDguMjE2IDAgMDAtOC4yMTYtOC4yMTZ6bTAgMTMuNTVhNS4zMzMgNS4zMzMgMCAxMTAtMTAuNjY3IDUuMzMzIDUuMzMzIDAgMDEwIDEwLjY2N3ptOC41NDEtMTUuNzk1YTEuOTIgMS45MiAwIDEwMCAzLjg0IDEuOTIgMS45MiAwIDAwMC0zLjg0eiIgZmlsbD0iI2ZmZiIvPjwvbWFzaz48ZyBtYXNrPSJ1cmwoI2EpIj48cGF0aCBmaWxsPSIjZmZmIiBkPSJNLTguMzM1LTkuMDAzaDQ5LjkyM1Y0MC45MkgtOC4zMzV6Ii8+PC9nPjwvc3ZnPg=="
@@ -109,19 +172,18 @@
                                 <path d="M12.759 20.758v-9.516L21.122 16l-8.363 4.758z" fill="#000000" />
                             </g>
                             <defs>
-                                <clipPath id="clip0_1561_106415">
-                                    <path fill="#fff" d="M0 0h32v32H0z" />
-                                </clipPath>
+                                <clipPath id="clip0_1561_106415"><path fill="#fff" d="M0 0h32v32H0z" /></clipPath>
                             </defs>
                         </svg>
                     </a>
                 </div>
-                <div class="for-logo">
-                    <img class="logo" src="avtomatization/logos-1.png" />
-                </div>
+                <div class="for-logo"><img class="logo" src="avtomatization/logos-1.png" /></div>
             </div>
-        </footer>-->
+        </footer>
         <script src="quiz.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
     </body>
 </html>
