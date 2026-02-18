@@ -55,7 +55,7 @@ main {
 .left {
     margin-left: 0%;
     flex-direction: column;
-    width: 25%;
+    width: 29%;
     height: 100%;
     color: white;
     display: flex;
@@ -169,13 +169,14 @@ main {
     text-shadow:
         0 0 10px #00d4ff,
         0 0 20px #00d4ff;
-    font-size: 187%;
-    margin: 0 16.5% 0 0;
     transform: translateY(2vh);
     padding: 1vh;
-    align-content: center;
+    text-align: left;
 }
+.div2{
+margin-left: 2.4%
 
+}
 .div1 {
     background-color: black;
     width: 125%;
@@ -188,7 +189,7 @@ main {
     padding-top: 10px;
     border-radius: 0 20px 0 0;
     text-align: left;
-    margin-left: 10%;
+
 }
 .ittech {
     margin: 0;
