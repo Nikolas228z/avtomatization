@@ -8,39 +8,26 @@ body{
     display: flex;
     align-content: center;
 }
-.up-img{
-    width: 40%;
-    margin-left: 7%;
-        border-radius: 2vh;
-    box-shadow: 1px 3px 96px rgba(42, 82, 152, 0.41);
-}
-.itemsCenter{
+.titlePage{
+    background-color: saddlebrown;
+    height: 50vh;
+    width: 20%;
+    margin: 0 auto;
+    padding: 5vh;
+    border-radius: 0 3vh 3vh 0;
     align-content: center;
 }
-.down-img{
-    width: 40%;
-    margin-right: 7%;
-        border-radius: 2vh;
-    box-shadow: 1px 3px 96px rgba(42, 82, 152, 0.41);
-}
-.title{
+.titleOfBook{
+    color: white;
     text-align: center;
-    font-size: 3vh;
-    font-variant-east-asian: full-width;
+    transform: translateY(8vh);
+    margin-right: 10%;
 }
-.wth-wid{
-    width: 80%;
-      margin: 0 auto;
-    text-align: center;
-    font-size: 2.5vh;
-}
-.main-title{
-    text-align: center;
-    color: #8c9ebe;
-    font-size:3rem;
-}
-.for-down-marg{
-    margin: 0 0 5% 0;
+.butonOne{
+    height: 15vh;
+    width: 15%;
+    margin-left: 95%;
+    transform: translateY(-5vh);
 }
 @media (max-width: 1000px){
     .navbar
@@ -61,4 +48,12 @@ body{
     #couples-1,#couples-2{
     flex-direction: column
     }
+}
+
+.forDivHis
+{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    margin: 30px;
 }
