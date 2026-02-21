@@ -4,7 +4,7 @@ function page(username, describe){
    let p = document.createElement("p");
     let button = document.createElement("button");
 
-    button.textContent= "---->";
+    button.textContent= ">";
 
 
     forDiv.classList.add("forDivHis");
@@ -12,14 +12,23 @@ function page(username, describe){
     forH2.textContent = username;
     p.textContent = describe;
     forDiv.appendChild(button);
-
+button.addEventListener("click", () =>changeColor(forDiv,button));
     forDiv.appendChild(p);
     let forSection = document.getElementById("mainSection");
     forSection.appendChild(forDiv);
 }
 
 
+function changeColor(e,button){
+    e.style.backgroundColor = "green";
+button.addEventListener("click", () =>changeOtherColor(e,button));
 
+}
+function changeOtherColor(v,button){
+    v.style.backgroundColor = "yellow";
+button.addEventListener("click", () =>changeColor(v,button));
+
+}
 const users = [
   { name: "Сторінка1", describe: 18 },
   { name: "Сторінка2", describe: 20 },
