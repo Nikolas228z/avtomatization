@@ -1,3 +1,25 @@
+.popbox{
+    background:  linear-gradient(45deg, rgba(0, 198, 255, 0.7), rgba(0, 114, 255, 0.69));
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 120;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    /*align-items: center;*/
+}
+.popup{
+    background-color: rgb(30, 93, 172);
+    width: 82%;
+    height: 70%;
+    border-radius: 43px;
+    box-shadow:  1px 79px 188px black;
+}
+.probne{
+    width: 50%;
+        border:double;
+}
 header {
     position: sticky;
     top: 0;
