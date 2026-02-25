@@ -2,13 +2,12 @@ body {
     margin: 0;
     background-color: black;
 }
-main {
-    margin-top: 4%;
-}
-.navbar {
-    font-size: 23px;
+
+main{
+margin-top: 0%;
 
 }
+
 @keyframes test {
     0% {
         opacity: 0;
@@ -75,6 +74,7 @@ main {
     justify-content: space-between;
     text-align: center;
 }
+
 .left-up {
     height: 15%;
     background-color: black;
