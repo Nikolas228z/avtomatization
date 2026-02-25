@@ -1,5 +1,5 @@
-.popbox{
-    background:  linear-gradient(45deg, rgba(0, 198, 255, 0.7), rgba(0, 114, 255, 0.69));
+.popbox {
+    background: linear-gradient(45deg, rgba(0, 198, 255, 0.7), rgba(0, 114, 255, 0.69));
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -9,23 +9,53 @@
     align-items: stretch;
     /*align-items: center;*/
 }
-.popup{
+.popup {
     background-color: rgb(30, 93, 172);
     width: 82%;
     height: 70%;
     border-radius: 43px;
-    box-shadow:  1px 79px 188px black;
+    box-shadow: 1px 79px 188px black;
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
 }
-.probne{
-    width: 50%;
-        border:double;
+
+.boss {
+    border: inset 19px rgba(0, 198, 255, 0.7);
+    width: 49%;
 }
+.megaboss {
+    font-family: "Limelight", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    align-items: center;
+}
+.miniboss {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.andriea {
+    font-size: 2rem;
+}
+.viktoria {
+    font-size: 6rem;
+}
+.ivanivna {
+    font-size: 2rem;
+}
+
 header {
     position: sticky;
     top: 0;
     align-content: center;
 }
-main{
+main {
     margin-top: 78px;
 }
 h1,
@@ -55,7 +85,6 @@ body {
     background-color: #0a0f1c;
     color: white;
     margin: 0;
-
 }
 .for-img {
     width: 80%;
@@ -107,7 +136,6 @@ body {
     height: 50vh;
     object-fit: cover;
     transition: all 0.5s ease;
-
 }
 .overlay {
     text-align: center;
@@ -182,16 +210,15 @@ h4 {
 .image-container:hover::after {
     left: 150%;
 }
-.footer{
+.footer {
     padding-top: 100px;
 }
-.litle-title{
+.litle-title {
     padding-top: 27px;
 }
 
-
 @media (max-width: 1000px) {
-    header{
+    header {
         width: 60px;
     }
     .div-wth-info {
@@ -201,7 +228,7 @@ h4 {
         text-align: center;
     }
 
-    .spa{
+    .spa {
         display: none;
     }
     .two-down {
@@ -210,30 +237,30 @@ h4 {
         margin: 0 auto;
         width: 100%;
     }
-    .image-container{
+    .image-container {
         width: 90%;
         margin: 3% auto;
     }
-    .for-img{
+    .for-img {
         width: 92%;
         margin: 0 4% 0 4%;
         height: 25vh;
     }
-    .title{
+    .title {
         font-weight: 600;
         font-size: 4.5rem;
     }
-    .text{
+    .text {
         font-size: 2.5rem;
     }
     .overlay p {
         font-size: 2.6rem;
     }
-    .overlay h1{
+    .overlay h1 {
         font-size: 4rem;
     }
     .overlay h3,
-    h4{
+    h4 {
         font-size: 3rem;
     }
 }
