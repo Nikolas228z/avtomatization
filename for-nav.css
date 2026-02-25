@@ -31,6 +31,9 @@ header {
     transform: translateY(0);
   }
 }
+.nav-link{
+
+}
 @media (max-width: 992px) {
     .navbar {
       font-size: 4.2rem;
