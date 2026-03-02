@@ -33,13 +33,13 @@
     </head>
     -------------------
     <body>
-        <div class="popbox">
+        <div class="popbox" id="popupWindow">
             <div class="popup">
                 <div class="megaboss">
                     <div class="miniboss">
-                <h3 class="andriea">Андреєва</h3>
-                <h2 class="viktoria">Вікторія</h2>
-                    <h3 class="ivanivna"> Іванівна</h3>
+                <h3 class="andriea" id="boss1">Андреєва</h3>
+                <h2 class="viktoria" id="boss2">Вікторія</h2>
+                    <h3 class="ivanivna" id="boss3"> Іванівна</h3>
                     </div>
                      <p>Голова циклової комісії.<br>
                             Cпеціаліст вищої категорії, Bикладач</p>
@@ -115,14 +115,14 @@
             <section>
                 <h1 class="title">ВИКЛАДАЦЬКИЙ СКЛАД ЦИКЛОВОЇ КОМІСІЇ</h1>
                 <div class="div-wth-info">
-                    <div class="image-container">
+                    <div class="image-container" onclick="openModal(1)">
                         <img src="avtomatization/Знімок екрана_4-10-2025_163632_vsc.msu.edu.ua.jpeg" alt="photo" />
-                        <div class="overlay">
+                        <div class="overlay" >
                             <h1>Тупиця Мар'яна Юрівна</h1>
                             <p>спеціаліст вищої категорії</p>
                         </div>
                     </div>
-                    <div class="image-container">
+                    <div class="image-container" onclick="openModal(2)">
                         <img src="avtomatization/Знімок екрана_4-10-2025_163515_vsc.msu.edu.ua.jpeg" />
                         <div class="overlay">
                             <h1>Андреєва Вікторія Іванівна</h1>
@@ -130,7 +130,7 @@
                             <p>спеціаліст вищої категорії, викладач</p>
                         </div>
                     </div>
-                    <div class="image-container">
+                    <div class="image-container" onclick="openModal(3)">
                         <img src="avtomatization/Знімок екрана_4-10-2025_16361_vsc.msu.edu.ua.jpeg" />
                         <div class="overlay">
                             <h1>Гера Едуард Васильович</h1>
@@ -139,14 +139,14 @@
                     </div>
                 </div>
                 <div class="two-down">
-                    <div class="image-container">
+                    <div class="image-container" onclick="openModal(4)">
                         <img src="avtomatization/Знімок екрана_4-10-2025_163541_vsc.msu.edu.ua.jpeg" />
                         <div class="overlay">
                             <h1>Андреєва Світлана Константинівна</h1>
                             <p>спеціаліст вищої категорії, викладач-методист</p>
                         </div>
                     </div>
-                    <div class="image-container">
+                    <div class="image-container" onclick="openModal(5)">
                         <img src="avtomatization/Знімок екрана_4-10-2025_163617_vsc.msu.edu.ua.jpeg" />
                         <div class="overlay">
                             <h1>Іваніга Йосип Йосипович</h1>
@@ -245,6 +245,7 @@
                 </div>
             </div>
         </footer>
+          <script src="pers.js"></script>
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
