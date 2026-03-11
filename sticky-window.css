@@ -1,0 +1,29 @@
+.sticky-window{
+position: fixed;
+z-index: 200;
+background-color: #000047;
+bottom: 0;
+margin: 0 auto;
+width: 40%;
+    height: 20%;
+    left: 20%;
+    text-align: center;
+}
+.sticky-h1{
+font-size: 32px;
+}
+.sticky-p{
+font-size: 30px
+}
+.list{
+list-style: none;
+display: flex;
+justify-content: space-between;
+}
+.listLi{
+font-size: 24px;
+    text-align: center
+}
+.listLi:hover{
+color: #09405b
+}
