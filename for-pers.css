@@ -37,6 +37,11 @@
 .popbox.active .popup{
     transform: scale(1);
 }
+.butX{
+    display: flex;
+    justify-content: right;
+    padding-bottom: 20px;
+}
 .xbut{
   background: linear-gradient(45deg, #ff0000, #cc0000);
   color: white;
@@ -107,6 +112,14 @@ main {
 .role{
 margin: 2px 0;
 }
+.summ:hover{
+    cursor: pointer;
+ background: linear-gradient(45deg, #d9d9d9, #a6a6a6);
+box-shadow: 0 0 20px rgba(120, 120, 120, 0.8);
+  transform: scale(1.05);
+      transition: all 1.2s ease;
+}
+
 .events-list{
 list-style: none;
 padding-left: 0;

@@ -39,7 +39,8 @@
     <body>
         <div class="popbox" id="popupWindow">
             <div class="popup">
-                <button class="xbut" onclick="closeModal()">X</button>
+                <div class="butX"><button class="xbut" onclick="closeModal()">X</button></div>
+
                 <div class="bonus">
                     <div class="megaboss">
                         <div class="miniboss">
@@ -62,10 +63,11 @@
                     <h3 class="HCen">ДІЗНАТИСЬ БІЛЬШЕ</h3>
                     <div>
                         <details>
-                            <summary>ПОДІЇ</summary>
+                            <summary class="summ">ПОДІЇ</summary>
 
-                            <ul class="events-list">
+                            <ul class="events-list" id="ulik">
                                 <li>
+                                    <!--андреєва і гера-->
                                     <a href="event1.html"
                                         >Актуальні технічні рішення та професійні компетентності: захист курсових
                                         проєктів</a
@@ -101,7 +103,7 @@
                         </details>
 
                         <details>
-                            <summary>СПЕЦПРЕДМЕТИ</summary>
+                            <summary class="summ">СПЕЦПРЕДМЕТИ</summary>
                             <ul class="events-list" id="uli"></ul>
                         </details>
                     </div>
@@ -185,7 +187,7 @@
                     <div class="image-container" onclick="openModal(2)">
                         <img src="avtomatization/Знімок екрана_4-10-2025_163515_vsc.msu.edu.ua.jpeg" />
                         <div class="overlay">
-                            <h1>Андреєва Вікторія Іванівна</h1>
+                            <h2>Андреєва Вікторія Іванівна</h2>
                             <h3>Голова циклової комісії</h3>
                             <p>спеціаліст вищої категорії, викладач</p>
                         </div>
