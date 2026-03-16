@@ -61,7 +61,20 @@
   box-shadow: 0 0 20px rgba(255, 0, 0, 1);
   transform: scale(1.05);
 }
+.up, .down {
+  position: fixed;
+  right: 20px;
+  font-size: 30px;
+  text-decoration: none;
+}
 
+.up {
+  bottom: 80px;
+}
+
+.down {
+  bottom: 40px;
+}
 .boss {
     border: inset 19px rgba(0, 198, 255, 0.7);
     width: 49%;
