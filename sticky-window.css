@@ -1,29 +1,99 @@
 .sticky-window{
 position: fixed;
 z-index: 200;
-background-color: #000047;
+
 bottom: 0;
-margin: 0 auto;
-width: 40%;
-    height: 20%;
-    left: 20%;
-    text-align: center;
+left: 50%;
+transform: translate(-50%, 100%);
+
+width: 38%;
+padding: 20px;
+
+background: rgba(0, 0, 0, 0.95);
+backdrop-filter: blur(10px);
+
+border-radius: 15px 15px 0 0;
+
+border: 1px solid rgba(0, 255, 255, 0.3);
+
+box-shadow:
+0 -10px 40px rgba(0,0,0,0.8),
+0 0 20px rgba(0,255,255,0.3);
+
+text-align: center;
+color: white;
+
+/* анімація */
+animation: stickyWindow 1.2s ease forwards;
+animation-delay: 4s;
 }
-.sticky-h1{
-font-size: 32px;
+
+@keyframes stickyWindow{
+
+0%{
+transform: translate(-50%, 100%);
+opacity: 0;
 }
-.sticky-p{
-font-size: 30px
+
+100%{
+transform: translate(-50%, 0);
+opacity: 1;
+}
+
+}
+#button{
+position: absolute;
+top: -15px;
+left: 50%;
+transform: translateX(-50%);
+
+background: #00eaff;
+color: black;
+
+border: none;
+padding: 5px 12px;
+
+border-radius: 8px;
+
+cursor: pointer;
+font-weight: bold;
+
+box-shadow: 0 0 10px #00eaff;
+
+transition: 0.3s;
+}
+
+#button:hover{
+transform: translateX(-50%) scale(1.1);
 }
 .list{
 list-style: none;
+padding: 0;
 display: flex;
-justify-content: space-between;
+justify-content: center;
+gap: 20px;
 }
+
 .listLi{
-font-size: 24px;
-    text-align: center
+cursor: pointer;
+transition: 0.3s;
+color: #ffffff;
 }
+
 .listLi:hover{
-color: #09405b
+color: #00eaff;
+text-shadow: 0 0 10px #00eaff;
+}
+.sticky-h1{
+font-size: 24px;
+margin-bottom: 10px;
+color: #00eaff;
+text-shadow: 0 0 10px #00eaff;
+}
+
+.sticky-p{
+font-size: 18px;
+color: #00eaff;
+text-shadow: 0 0 10px #00eaff;
+margin-bottom: 10px;
 }

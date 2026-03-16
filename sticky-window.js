@@ -1,5 +1,8 @@
 let button = document.getElementById("button");
-let windows2 = document.getElementsById("sticky-window");
-function show() {
-    windows2.style.display = none;
+let div = document.getElementById("stickyWindow");
+function stickyWindow() {
+    div.style.display = "none";
+    timer = setInterval(() => {
+    div.style.display = "block";
+    clearInterval(timer); }, 3000);
 }
