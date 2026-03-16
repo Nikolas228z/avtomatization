@@ -1,79 +1,80 @@
 .popbox {
-    background: linear-gradient(45deg, rgba(0,198,255,0.7), rgba(0,114,255,0.69));
-    width: 100vw;
-    min-height: 100vh;
+    background: linear-gradient(45deg, rgba(0, 198, 255, 0.7), rgba(0, 114, 255, 0.69));
     position: fixed;
-    top:0;
-    left:0;
-    z-index:120;
+    inset: 0;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    overflow-y: auto;
 
-    opacity:0;
-    visibility:hidden;
-    transition: opacity 0.35s ease;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* ГОЛОВНЕ */
+
+    padding-top: 40px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 120;
 }
-
-.popbox.active{
-    opacity:1;
-    visibility:visible;
+.popbox.active {
+    opacity: 1;
+    visibility: visible;
 }
-
-.popup{
-    background-color: rgb(30,93,172);
-    width:82%;
-    height:70%;
-    border-radius:43px;
-    box-shadow:1px 79px 188px black;
-    display:flex;
-    flex-direction:column;
-    padding:30px;
+.popup {
+    max-width: 1000px;
+    width: 90%;
+}
+.popup {
+    background-color: rgb(30, 93, 172);
+    width: 82%;
+    border-radius: 43px;
+    box-shadow: 1px 79px 188px black;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
     transform: scale(0.7);
     transition: transform 0.35s ease;
 }
 
-.popbox.active .popup{
+.popbox.active .popup {
     transform: scale(1);
 }
-.butX{
+.butX {
     display: flex;
     justify-content: right;
     padding-bottom: 20px;
 }
-.xbut{
-  background: linear-gradient(45deg, #ff0000, #cc0000);
-  color: white;
+.xbut {
+    background: linear-gradient(45deg, #ff0000, #cc0000);
+    color: white;
     width: 7%;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
-  transition: all 0.3s ease;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+    transition: all 0.3s ease;
 }
 
 .xbut:hover {
-  background: linear-gradient(45deg, #ff4d4d, #ff0000);
-  box-shadow: 0 0 20px rgba(255, 0, 0, 1);
-  transform: scale(1.05);
+    background: linear-gradient(45deg, #ff4d4d, #ff0000);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 1);
+    transform: scale(1.05);
 }
-.up, .down {
-  position: fixed;
-  right: 20px;
-  font-size: 30px;
-  text-decoration: none;
+.up,
+.down {
+    position: fixed;
+    right: 20px;
+    font-size: 30px;
+    text-decoration: none;
 }
 
 .up {
-  bottom: 80px;
+    bottom: 80px;
 }
 
 .down {
-  bottom: 40px;
+    bottom: 40px;
 }
 .boss {
     border: inset 19px rgba(0, 198, 255, 0.7);
@@ -94,7 +95,7 @@
 
     align-items: center;
 }
-.HCen{
+.HCen {
     text-align: center;
 }
 .miniboss {
@@ -122,39 +123,39 @@ header {
 main {
     margin-top: 78px;
 }
-.role{
-margin: 2px 0;
+.role {
+    margin: 2px 0;
 }
-.summ:hover{
+.summ:hover {
     cursor: pointer;
- background: linear-gradient(45deg, #d9d9d9, #a6a6a6);
-box-shadow: 0 0 20px rgba(120, 120, 120, 0.8);
-  transform: scale(1.05);
-      transition: all 1.2s ease;
+    background: linear-gradient(45deg, #d9d9d9, #a6a6a6);
+    box-shadow: 0 0 20px rgba(120, 120, 120, 0.8);
+    transform: scale(1.05);
+    transition: all 1.2s ease;
 }
 
-.events-list{
-list-style: none;
-padding-left: 0;
-margin-top: 10px;
+.events-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 10px;
 }
 
-.events-list li{
-margin: 6px 0;
+.events-list li {
+    margin: 6px 0;
 }
 
-.events-list a{
-display: block;
-padding: 10px 14px;
-border-radius: 8px;
-text-decoration: none;
-color: white;
-transition: 0.25s;
+.events-list a {
+    display: block;
+    padding: 10px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    transition: 0.25s;
 }
 
-.events-list a:hover{
-background: rgba(255,255,255,0.15);
-transform: translateX(6px);
+.events-list a:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateX(6px);
 }
 h1,
 h3 {
