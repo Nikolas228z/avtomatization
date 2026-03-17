@@ -1,0 +1,18 @@
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: #2f16a9;
+        overflow: hidden;
+    }
+canvas { display: block; }
+ iframe {
+      width: 500px;
+      height: 500px;
+      border: none;
+      border-radius: 20px;
+      box-shadow: 0 0 20px #00f2ff;
+    }
