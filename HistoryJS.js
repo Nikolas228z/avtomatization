@@ -1,58 +1,73 @@
-    let withZ = 150;
+let withZ = 150;
 
 function page(username, describe, pess){
    let forDiv = document.createElement("div");
-    let withDisFlx = document.createElement("div");
-    let another = document.createElement("div");
+   let withDisFlx = document.createElement("div");
+   let another = document.createElement("div");
    let forH2 = document.createElement("h2");
    let p = document.createElement("p");
-    let button = document.createElement("button");
-    let image = document.createElement("img");
-    button.textContent= ">";
-     image = pess;
-    another.appendChild(forH2);
-    forDiv.classList.add("forDivHis");
-    forDiv.appendChild(withDisFlx);
-    forH2.textContent = username;
-    p.textContent = describe;
-    withDisFlx.appendChild(button);
-     withDisFlx.appendChild(another);
-button.addEventListener("click", () =>oneAnim(forDiv,button,another,withDisFlx,pess));
-    button.classList.add("buton");
-    withDisFlx.classList.add("forAnother");
-    another.appendChild(p);
-    withDisFlx.style.display = "flex";
-    let forSection = document.getElementById("mainSection");
-    forSection.appendChild(forDiv);
+   let button = document.createElement("button");
+   let image = document.createElement("img");
+
+   button.textContent= ">";
+
+   // ✅ правильне підключення картинки
+   if(pess){
+       image.src = pess;
+       image.style.width = "100%";
+       another.appendChild(image);
+   }
+
+   another.appendChild(forH2);
+   another.appendChild(p);
+
+   forDiv.classList.add("forDivHis");
+   withDisFlx.classList.add("forAnother");
+   button.classList.add("buton");
+
+   forH2.textContent = username;
+   p.textContent = describe;
+
+   withDisFlx.appendChild(button);
+   withDisFlx.appendChild(another);
+   forDiv.appendChild(withDisFlx);
+
+   // ✅ нормальний toggle без removeEventListener
+   button.addEventListener("click", () => toggleAnim(forDiv, another, withDisFlx));
+
+   let forSection = document.getElementById("mainSection");
+   forSection.appendChild(forDiv);
+
+   if (username == "Історія Автоматизації"){
+        forH2.style.marginTop = "35%";
+   }
 }
 
+function toggleAnim(e, another, withDisFlx){
+    withZ++;
 
-function oneAnim(e,button,another,withDisFlx,pess){
-    withZ+=1;
+    if(e.classList.contains("leftAnim")){
+        // назад
+        e.classList.remove("leftAnim");
+        e.classList.add("RightAnim");
+
+        another.classList.add("forREdo");
+        another.classList.remove("animWithOpasity");
+
+        withDisFlx.classList.remove("reverse");
+
+    } else {
+        // вперед
+        e.classList.remove("RightAnim");
+        e.classList.add("leftAnim");
+
+        another.classList.add("animWithOpasity");
+        another.classList.remove("forREdo");
+
+        withDisFlx.classList.add("reverse");
+    }
+
     e.style.zIndex = withZ;
-    e.classList.remove("RightAnim");
-    e.classList.add("leftAnim");
-    another.classList.add("animWithOpasity");
-another.classList.remove("forREdo");
-    withDisFlx.style.flexDirection = "colum-reverse";
-button.addEventListener("click", () =>twoAnim(e,button, another,withDisFlx,pess));
-    button.removeEventListener("click",twoAnim);
-    withZ+=1;
-    e.style.zIndex = withZ;
-
-
-}
-function twoAnim(v,button, another,withDisFlx,pess){
-    v.classList.remove("leftAnim");
-      v.classList.add("RightAnim");
-    another.classList.add("forREdo");
-another.classList.remove("animWithOpasity");
-    withDisFlx.style.flexDirection = "colum";
-button.addEventListener("click", () =>oneAnim(v,button, another,withDisFlx,pess));
-    button.removeEventListener("click",oneAnim);
-       withZ-=1;
-    v.style.zIndex = withZ;
-
 }
 const users = [
   { name: "5. Комп’ютеризація та робототехніка (друга половина XX ст.)", describe:  "Розвиток електроніки привів до появи програмованих логічних контролерів (PLC), що дозволили змінювати роботу обладнання без його заміни. У 60–70-х роках з’явилися промислові роботи, які виконували небезпечні й монотонні операції.",pess:" " },
