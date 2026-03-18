@@ -1,192 +1,10 @@
-.popbox {
-    background: linear-gradient(45deg, rgba(0, 198, 255, 0.7), rgba(0, 114, 255, 0.69));
-    position: fixed;
-    inset: 0;
-
-    overflow-y: auto;
-
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* ГОЛОВНЕ */
-
-    padding-top: 40px;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 120;
-}
-.popbox.active {
-    opacity: 1;
-    visibility: visible;
-}
-.popup {
-    max-width: 1000px;
-    width: 90%;
-}
-.popup {
-    background-color: rgb(30, 93, 172);
-    width: 82%;
-    border-radius: 43px;
-    box-shadow: 1px 79px 188px black;
-    display: flex;
-    flex-direction: column;
-    padding: 30px;
-    transform: scale(0.7);
-    transition: transform 0.35s ease;
-}
-
-.popbox.active .popup {
-    transform: scale(1);
-}
-.butX {
-    display: flex;
-    justify-content: right;
-    padding-bottom: 20px;
-}
-.xbut {
-    background: linear-gradient(45deg, #ff0000, #cc0000);
-    color: white;
-    width: 7%;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
-    transition: all 0.3s ease;
-}
-
-.xbut:hover {
-    background: linear-gradient(45deg, #ff4d4d, #ff0000);
-    box-shadow: 0 0 20px rgba(255, 0, 0, 1);
-    transform: scale(1.05);
-}
-.up,
-.down {
-    position: fixed;
-    right: 20px;
-    font-size: 30px;
-    text-decoration: none;
-}
-
-.up {
-    bottom: 80px;
-}
-
-.down {
-    bottom: 40px;
-}
-details summary {
-    cursor: pointer;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row-reverse;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-details summary::-webkit-details-marker {
-    display: none; /* прибирає стандартну стрілку */
-}
-
-details summary::before {
-    content: "➤"; /* стрілка вправо */
-    display: inline-block;
-    margin-right: 6px;
-    transition:
-        transform 0,
-        2s ease;
-}
-
-details[open] summary::before {
-    transform: rotate(90deg); /* повертає стрілку вниз при відкритті */
-}
-.boss {
-    border: inset 19px rgba(0, 198, 255, 0.7);
-    width: 49%;
-}
-.bonus {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-.megaboss {
-    font-family: "Limelight", sans-serif;
-    font-weight: 900;
-    font-style: normal;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-
-    align-items: center;
-}
-.HCen {
-    text-align: center;
-    font-weight: bold;
-}
-.miniboss {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-.andriea {
-    font-size: 2rem;
-}
-.viktoria {
-    font-size: 6rem;
-}
-.ivanivna {
-    font-size: 2rem;
-}
-
 header {
     position: sticky;
     top: 0;
     align-content: center;
 }
-main {
+main{
     margin-top: 78px;
-}
-.role {
-    margin: 2px 0;
-}
-.summ {
-    padding: 7px;
-}
-.summ:hover {
-    cursor: pointer;
-    /*background: linear-gradient(45deg, #d9d9d9, #a6a6a6);*/
-    box-shadow: 0 0 20px rgba(89, 139, 226, 0.98);
-    border-radius: 10px;
-
-    transition: all 0.2s ease;
-}
-
-.events-list {
-    list-style: none;
-    padding-left: 0;
-    margin-top: 10px;
-}
-
-.events-list li {
-    margin: 6px 0;
-}
-
-.events-list a {
-    display: block;
-    padding: 10px 14px;
-    border-radius: 8px;
-    text-decoration: none;
-    color: white;
-    transition: 0.25s;
-}
-
-.events-list a:hover {
-    background: rgba(255, 255, 255, 0.15);
-    transform: translateX(6px);
 }
 h1,
 h3 {
@@ -215,6 +33,7 @@ body {
     background-color: #0a0f1c;
     color: white;
     margin: 0;
+
 }
 .for-img {
     width: 80%;
@@ -266,6 +85,7 @@ body {
     height: 50vh;
     object-fit: cover;
     transition: all 0.5s ease;
+
 }
 .overlay {
     text-align: center;
@@ -340,15 +160,16 @@ h4 {
 .image-container:hover::after {
     left: 150%;
 }
-.footer {
+.footer{
     padding-top: 100px;
 }
-.litle-title {
+.litle-title{
     padding-top: 27px;
 }
 
+
 @media (max-width: 1000px) {
-    header {
+    header{
         width: 60px;
     }
     .div-wth-info {
@@ -358,7 +179,7 @@ h4 {
         text-align: center;
     }
 
-    .spa {
+    .spa{
         display: none;
     }
     .two-down {
@@ -367,47 +188,30 @@ h4 {
         margin: 0 auto;
         width: 100%;
     }
-    .image-container {
+    .image-container{
         width: 90%;
         margin: 3% auto;
     }
-    .for-img {
+    .for-img{
         width: 92%;
         margin: 0 4% 0 4%;
         height: 25vh;
     }
-    .title {
+    .title{
         font-weight: 600;
         font-size: 4.5rem;
     }
-    .text {
+    .text{
         font-size: 2.5rem;
     }
     .overlay p {
         font-size: 2.6rem;
     }
-    .overlay h1 {
+    .overlay h1{
         font-size: 4rem;
     }
     .overlay h3,
-    h4 {
+    h4{
         font-size: 3rem;
-    }
-    .popup {
-        width: 94%;
-        height: 96%;
-    }
-    .role {
-        font-size: 0, 5rem;
-    }
-    .HCen {
-        font-size: 3rem;
-        margin-bottom: 71px;
-    }
-    .summ {
-        font-size: 2.1rem;
-    }
-    li {
-        font-size: 1.7rem;
     }
 }
