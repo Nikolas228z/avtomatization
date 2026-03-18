@@ -4,7 +4,7 @@ let answer1 = document.getElementById("answer1");
 let answer2 = document.getElementById("answer2");
 let answer3 = document.getElementById("answer3");
 let answer4 = document.getElementById("answer4");
-let div = document.getElementById("div");
+let test = document.getElementById("div");
 let buton = document.getElementById("buton");
 let timer;
 let score = 0;
@@ -151,7 +151,7 @@ function chc() {
 }
 function start() {
     chc();
-    div.style.display = "block";
+    test.style.display = "block";
     div3.style.display = "block";
     question.textContent = questions[currentQuestion].name;
     answer1.textContent = questions[currentQuestion].answer1;
