@@ -175,6 +175,7 @@ function openModal(id) {
      let ul = document.getElementById("uli");
 let uli =  document.getElementById("ulik");
      ul.innerHTML = "";
+     uli.innerHTML = "";
 
      FirstName.textContent = user.FirstName;
      secondName.textContent = user.secondName;
@@ -204,6 +205,7 @@ let uli =  document.getElementById("ulik");
          li.appendChild(a);
          uli.appendChild(li);
          a.textContent= eventi.title;
+
     });
 
      document.getElementById("popupWindow").classList.add("active");
