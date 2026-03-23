@@ -14,7 +14,8 @@ function page(username, describe, pess){
    // ✅ правильне підключення картинки
    if(pess){
        image.src = pess;
-       image.style.width = "100%";
+       image.style.width = "90%";
+        image.style.display = "none";
        another.appendChild(image);
    }
 
@@ -33,7 +34,7 @@ function page(username, describe, pess){
    forDiv.appendChild(withDisFlx);
 
    // ✅ нормальний toggle без removeEventListener
-   button.addEventListener("click", () => toggleAnim(forDiv, another, withDisFlx));
+   button.addEventListener("click", () => toggleAnim(forDiv, another, withDisFlx,image,forH2,p));
 
    let forSection = document.getElementById("mainSection");
    forSection.appendChild(forDiv);
@@ -43,27 +44,33 @@ function page(username, describe, pess){
    }
 }
 
-function toggleAnim(e, another, withDisFlx){
+function toggleAnim(e, another, withDisFlx,image,forH2,p){
     withZ++;
 
     if(e.classList.contains("leftAnim")){
         // назад
         e.classList.remove("leftAnim");
         e.classList.add("RightAnim");
-
-        another.classList.add("forREdo");
-        another.classList.remove("animWithOpasity");
-
+        image.classList.remove("forREdo");
+        image.classList.add("animWithOpasity");
+        forH2.classList.remove("animWithOpasity");
+        forH2.classList.add("forREdo");
+        p.classList.remove("animWithOpasity");
+        p.classList.add("forREdo");
+        image.style.display ="none";
         withDisFlx.classList.remove("reverse");
 
     } else {
         // вперед
         e.classList.remove("RightAnim");
         e.classList.add("leftAnim");
-
-        another.classList.add("animWithOpasity");
-        another.classList.remove("forREdo");
-
+        image.classList.remove("animWithOpasity");
+        image.classList.add("forREdo");
+        forH2.classList.remove("forREdo");
+        forH2.classList.add("animWithOpasity");
+        p.classList.remove("forREdo");
+        p.classList.add("animWithOpasity");
+        image.style.display ="inline-block";
         withDisFlx.classList.add("reverse");
     }
 
