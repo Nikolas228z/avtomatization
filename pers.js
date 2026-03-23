@@ -6,7 +6,17 @@ const users = [
           LastName: "Юрівна",
           path: "avtomatization/Знімок екрана_4-10-2025_163632_vsc.msu.edu.ua.jpeg",
           roles: ["specialist"],
-          subjects: ["Інформатика", "Основи програмування"]
+          subjects: ["Інформатика", "Основи програмування"],
+          events: [
+          {
+               title: "Участь студентів у всеукраїнському міжуніверситетському хакатоні МХП",
+               link: "pers1.html"
+          },
+          {
+               title: "Розвиток академічної мобільності",
+               link: "pers1.html"
+          },
+     ]
      },
 
      {
@@ -23,7 +33,41 @@ const users = [
                "Автоматизація технологічних процесів",
                "Комп’ютерно-інтегровані технології автоматичного управління",
                "Організація комп'ютерних мереж"
-          ]
+          ],
+          events: [
+          {
+               title: "Участь студентів у всеукраїнському міжуніверситетському хакатоні МХП",
+               link: "pers1.html"
+          },
+          {
+               title: "Розвиток академічної мобільності",
+               link: "pers1.html"
+          },
+               {
+               title: "Актуальні технічні рішення та професійні компетентності: захист курсових проєктів" ,
+                    link:"pers1.html"
+               },
+               {
+               title: "Гостьова лекція для студентів спеціальності 151" ,
+                    link:"pers1.html"
+               },
+                {
+               title: "Методичний семінар" ,
+                    link:"pers1.html"
+               },
+                 {
+               title: "Заняття-екскурсія з дисципліни «Вступ до спеціальності»" ,
+                    link:"pers1.html"
+               },
+               {
+               title: "Інтегроване заняття на ПрАТ «Гроно-Текс»" ,
+                    link:"pers1.html"
+               },
+               {
+               title: "Студентська науково-практична конференція" ,
+                    link:"pers1.html"
+               }
+     ]
      },
 
      {
@@ -40,7 +84,22 @@ const users = [
                "Основи телемеханіки",
                "Системи та мережі зв'язку",
                "Телекомунікаційні та інформаційні мережі"
-          ]
+          ],
+          events: [
+               {
+               title: "Актуальні технічні рішення та професійні компетентності: захист курсових проєктів" ,
+                    link:"pers1.html"
+               },
+               {
+               title: "Всеукраїнський хакатон від МХП" ,
+                    link:"pers1.html"
+               },
+                {
+               title: "Гостьова лекція для студентів спеціальності 151" ,
+                    link:"pers1.html"
+               }
+
+     ]
      },
 
      {
@@ -50,7 +109,29 @@ const users = [
           LastName: "Константинівна",
           path: "avtomatization/Знімок екрана_4-10-2025_163541_vsc.msu.edu.ua.jpeg",
           roles: ["specialist", "vikladach"],
-          subjects: ["Теорія автоматичного регулювання (ТАР)"]
+          subjects: ["Теорія автоматичного регулювання (ТАР)"],
+          events: [
+               {
+                    title: "Участь студентів у всеукраїнському міжуніверситетському хакатоні МХП",
+                    link: "pers1.html"
+               },
+               {
+                    title: "Розвиток академічної мобільності",
+                    link: "pers1.html"
+               },
+                {
+               title: "Гостьова лекція для студентів спеціальності 151" ,
+                    link:"pers1.html"
+               },
+                {
+               title: "Методичний семінар" ,
+                    link:"pers1.html"
+               },
+                 {
+               title: "Заняття-екскурсія з дисципліни «Вступ до спеціальності»" ,
+                    link:"pers1.html"
+               }
+          ]
      },
 
      {
@@ -60,15 +141,27 @@ const users = [
           LastName: "Йосипович",
           path: "avtomatization/Знімок екрана_4-10-2025_163617_vsc.msu.edu.ua.jpeg",
           roles: ["specialist", "vikladach"],
-          subjects: ["Теорія автоматичного регулювання (ТАР)"]
+          subjects: ["Теорія автоматичного регулювання (ТАР)"],
+          events: [
+               {
+                    title: "Участь студентів у всеукраїнському міжуніверситетському хакатоні МХП",
+                    link: "pers1.html"
+               },
+               {
+                    title: "Розвиток академічної мобільності",
+                    link: "pers1.html"
+               },
+                {
+               title: "Гостьова лекція для студентів спеціальності 151" ,
+                    link:"pers1.html"
+               },
+          ]
      }
 ];
 
 function openModal(id) {
      const user = users.find((u) => u.id === Number(id));
-
      if (!user) return;
-     document.getElementById("uli").innerHTML = "";
 
      const FirstName = document.getElementById("boss1");
      const secondName = document.getElementById("boss2");
@@ -80,18 +173,23 @@ function openModal(id) {
      let vik = document.getElementById("vikladach");
 
      let ul = document.getElementById("uli");
+let uli =  document.getElementById("ulik");
+     ul.innerHTML = "";
+     uli.innerHTML = "";
 
      FirstName.textContent = user.FirstName;
      secondName.textContent = user.secondName;
      LastName.textContent = user.LastName;
      img.src = user.path;
 
+     // предмети
      user.subjects.forEach((subject) => {
           let li = document.createElement("li");
           li.textContent = subject;
           ul.appendChild(li);
      });
 
+     // ролі
      gol.style.display = "none";
      spec.style.display = "none";
      vik.style.display = "none";
@@ -100,11 +198,16 @@ function openModal(id) {
           document.getElementById(role).style.display = "block";
      });
 
-     user.subjects.forEach((subject) => {
-          let li = document.createElement("li");
-          li.textContent = subject;
-          ul.appendChild(li);
-     });
+     // події
+    user.events.forEach((eventi) => {
+       let li =  document.createElement("li");
+         let a = document.createElement("a");
+         li.appendChild(a);
+         uli.appendChild(li);
+         a.textContent= eventi.title;
+
+    });
+
      document.getElementById("popupWindow").classList.add("active");
 }
 
