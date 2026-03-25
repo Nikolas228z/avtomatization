@@ -1,0 +1,126 @@
+body{
+    background-color: #0A0F1C;
+    color: white;
+    margin: 0;
+}
+
+.layoutFlex{
+    display: flex;
+    align-content: center;
+}
+
+.sidebar{
+    background-color: saddlebrown;
+    height: 50vh;
+    width: 20%;
+    margin: 0 auto;
+    padding: 5vh;
+    border-radius: 0 3vh 3vh 0;
+}
+
+.pageTitle{
+    text-align: center;
+    transform: translateY(8vh);
+    margin-right: 10%;
+}
+
+.mainButton{
+    height: 15vh;
+    width: 15%;
+    margin-left: 95%;
+    transform: translateY(-5vh);
+}
+
+.cardFlex{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@media (max-width: 1000px){
+
+    .cardFlex{
+        flex-direction: column;
+    }
+
+    .cardFlex.reverseLayout{
+        flex-direction: column-reverse;
+    }
+
+    .toggleBtn{
+        width: 100%;
+        height: 5vh;
+        transform: rotate(90deg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card{
+        width: 90% !important;
+        position: relative;
+    }
+
+    .animateForward{
+        animation-name: mobileForward;
+        animation-duration: 1.3s;
+        transform: translateY(100%);
+    }
+
+    .animateBack{
+        animation-name: mobileBack;
+        animation-duration: 1.3s;
+    }
+}
+
+.toggleBtn{
+    background-color: #f1ab00;
+    border: solid 3px #723a12;
+    color: saddlebrown;
+    width: 8%;
+    height: 30vh;
+    border-radius: 1vh;
+    margin: 0 1.5%;
+}
+
+.mainTitlePage{
+    position: absolute;
+    width: 20%;
+    height: 40vh;
+    border-radius: 3vh 0 0 3vh;
+    margin: 30px;
+    background-color: saddlebrown;
+    border: solid 3px #723a12;
+    text-align: center;
+}
+
+.animateForward{
+    animation-name: desktopForward;
+    animation-duration: 1.5s;
+    transform: translateX(100%);
+}
+
+.animateBack{
+    animation-name: desktopBack;
+    animation-duration: 1.5s;
+}
+
+.fadeIn{
+    animation: fadeInAnim 0.1s;
+    opacity: 0;
+}
+
+.fadeOut{
+    animation: fadeOutAnim 3s;
+    opacity: 1;
+}
+
+@keyframes fadeInAnim{
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+}
+
+@keyframes fadeOutAnim{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
