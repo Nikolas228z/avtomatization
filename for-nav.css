@@ -12,7 +12,7 @@ header {
 .navbar-nav li a {
   color: #cee4ff;
   font-weight: 594;
-}
+  }
 .navbar {
   animation-duration: 3s;
   animation-name: fallNav;
