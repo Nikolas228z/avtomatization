@@ -37,6 +37,15 @@ footer {
 .proba {
   width: 100%;
 }
+#ainfoter {
+ color: white; 
+  text-decoration: none;
+}
+#ainfoter:hover{
+  text-decoration: underline;
+  color: #6969fd;
+  transition: 2s;
+}
 .for-marg {
   margin-left: 5%;
 }
