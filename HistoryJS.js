@@ -59,6 +59,8 @@ function toggleAnim(e, another, withDisFlx,image,forH2,p){
         p.classList.add("forREdo");
         image.style.display ="none";
         withDisFlx.classList.remove("reverse");
+          p.style.display = "inline-block";
+        forH2.style.display = "inline-block";
 
     } else {
         // вперед
@@ -72,6 +74,9 @@ function toggleAnim(e, another, withDisFlx,image,forH2,p){
         p.classList.add("animWithOpasity");
         image.style.display ="inline-block";
         withDisFlx.classList.add("reverse");
+          p.style.display = "none";
+        forH2.style.display = "none";
+
     }
 
     e.style.zIndex = withZ;

@@ -34,9 +34,9 @@ function page(username, describe, pess){
    forDiv.appendChild(withDisFlx);
 
    // ✅ нормальний toggle без removeEventListener
-   button.addEventListener("click", () => toggleAnim(forDiv, another, withDisFlx,image,forH2,p));
+   button.addEventListener("click", () => Anim(forDiv, another, withDisFlx,image,forH2,p));
 
-   let forSection = document.getElementById("mainSection");
+   let forSection = document.getElementById("SectionForMobile");
    forSection.appendChild(forDiv);
 
    if (username == "Історія Автоматизації"){
@@ -44,7 +44,7 @@ function page(username, describe, pess){
    }
 }
 
-function toggleAnim(e, another, withDisFlx,image,forH2,p){
+function Anim(e, another, withDisFlx,image,forH2,p){
     withZ++;
 
     if(e.classList.contains("leftAnimForMobile")){
@@ -59,6 +59,8 @@ function toggleAnim(e, another, withDisFlx,image,forH2,p){
         p.classList.add("forREdo");
         image.style.display ="none";
         withDisFlx.classList.remove("reverse");
+        p.style.display = "inline-block";
+        forH2.style.display = "inline-block";
 
     } else {
         // вперед
@@ -72,6 +74,8 @@ function toggleAnim(e, another, withDisFlx,image,forH2,p){
         p.classList.add("animWithOpasity");
         image.style.display ="inline-block";
         withDisFlx.classList.add("reverse");
+        p.style.display = "none";
+        forH2.style.display = "none";
     }
 
     e.style.zIndex = withZ;
