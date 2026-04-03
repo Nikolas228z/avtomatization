@@ -39,15 +39,6 @@ body{
 
 @media (max-width: 1000px){
 
-    .forAnother{
-
-        transform: rotate();
-    }
-
-    /* коли натиснув */
-    .forAnother.reverse{
-        flex-direction: column-reverse;
-    }
 
     .buton{
 
@@ -57,11 +48,6 @@ body{
         align-items: center;
     }
 
-    .forDivHis{
-        width: 90% !important;
-        position: relative;
-        transform: rotate(90deg);
-    }
     .leftAnim{
       animation-name: animationInLeft !important;
     animation-duration: 1.3s;

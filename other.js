@@ -50,6 +50,7 @@ function Anim(e, another, withDisFlx,image,forH2,p){
     if(e.classList.contains("leftAnimForMobile")){
         // назад
         e.classList.remove("leftAnimForMobile");
+        another.style.flexDirection = "row";
         e.classList.add("RightAnimForMobile");
         image.classList.remove("forREdo");
         image.classList.add("animWithOpasity");
@@ -61,6 +62,7 @@ function Anim(e, another, withDisFlx,image,forH2,p){
         withDisFlx.classList.remove("reverse");
         p.style.display = "inline-block";
         forH2.style.display = "inline-block";
+
 
     } else {
         // вперед
@@ -74,8 +76,10 @@ function Anim(e, another, withDisFlx,image,forH2,p){
         p.classList.add("animWithOpasity");
         image.style.display ="inline-block";
         withDisFlx.classList.add("reverse");
+        another.style.flexDirection = "column-reverse";
         p.style.display = "none";
         forH2.style.display = "none";
+
     }
 
     e.style.zIndex = withZ;
