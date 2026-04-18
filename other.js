@@ -76,7 +76,7 @@ function Anim(e, another, withDisFlx,image,forH2,p){
         p.classList.add("animWithOpasity");
         image.style.display ="inline-block";
         withDisFlx.classList.add("reverse");
-        another.style.flexDirection = "column-reverse";
+        another.classList.remove("forAnother");
         p.style.display = "none";
         forH2.style.display = "none";
 
