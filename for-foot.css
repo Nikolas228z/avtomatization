@@ -3,7 +3,7 @@ body {
   color: white !important;
 }
 main{
-margin-top: 5%
+margin-top: 10%
 }
 .three-logo {
   width: 30%;
@@ -27,7 +27,7 @@ footer {
   font-weight: 900;
   padding-top: 23px;
 }
-.div-wht-dis1 {
+.div-wht-dis {
   display: flex;
   justify-content: space-around;
 }
@@ -36,15 +36,6 @@ footer {
 }
 .proba {
   width: 100%;
-}
-#ainfoter {
- color: white; 
-  text-decoration: none;
-}
-#ainfoter:hover{
-  text-decoration: underline;
-  color: #6969fd;
-  transition: 2s;
 }
 .for-marg {
   margin-left: 5%;
@@ -63,6 +54,9 @@ svg {
   width: 49px;
 }
 @media (max-width: 1000px) {
+  .div-wht-dis{
+    flex-direction: column;
+  }
   .litle-title {
     color: white;
     font-size: 55px;
@@ -78,10 +72,8 @@ svg {
   }
   footer {
     width: 100%;
+
   }
- .div-wht-dis1 {
-        display: block !important;
-    }
   .logo {
     width: 40%;
     margin: 0 auto;
