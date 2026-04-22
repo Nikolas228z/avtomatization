@@ -9,10 +9,12 @@ const users = [
           subjects: ["Інформатика", "Основи програмування"],
           events: [
                {
-                    title: "Участь студентів у всеукраїнському міжуніверситетському хакатоні МХП"
+                    title: "Участь студентів у всеукраїнському міжуніверситетському хакатоні МХП",
+                    path: "http://vsc.msu.edu.ua/?s=%D0%A3%D1%87%D0%B0%D1%81%D1%82%D1%8C+%D1%81%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%96%D0%B2+%D1%83+%D0%B2%D1%81%D0%B5%D1%83%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D1%81%D1%8C%D0%BA%D0%BE%D0%BC%D1%83+%D0%BC%D1%96%D0%B6%D1%83%D0%BD%D1%96%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82%D1%81%D1%8C%D0%BA%D0%BE%D0%BC%D1%83+%D1%85%D0%B0%D0%BA%D0%B0%D1%82%D0%BE%D0%BD%D1%96+%D0%9C%D0%A5%D0%9F"
                },
                {
-                    title: "Розвиток академічної мобільності"
+                    title: "Розвиток академічної мобільності",
+                    path: "http://vsc.msu.edu.ua/?s=%D0%A0%D0%BE%D0%B7%D0%B2%D0%B8%D1%82%D0%BE%D0%BA+%D0%B0%D0%BA%D0%B0%D0%B4%D0%B5%D0%BC%D1%96%D1%87%D0%BD%D0%BE%D1%97+%D0%BC%D0%BE%D0%B1%D1%96%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%96"
                }
           ]
      },
@@ -33,16 +35,41 @@ const users = [
                "Організація комп'ютерних мереж"
           ],
           events: [
-               { title: "Участь студентів у всеукраїнському міжуніверситетському хакатоні МХП" },
-               { title: "Розвиток академічної мобільності" },
-               { title: "Актуальні технічні рішення та професійні компетентності: захист курсових проєктів" },
-               { title: "Гостьова лекція для студентів спеціальності 151" },
-               { title: "Методичний семінар" },
-               { title: "Заняття-екскурсія з дисципліни «Вступ до спеціальності»" },
-               { title: "Інтегроване заняття на ПрАТ «Гроно-Текс»" },
-               { title: "Студентська науково-практична конференція" }
+               {
+                    title: "Участь студентів у всеукраїнському міжуніверситетському хакатоні МХП",
+                    path: "http://vsc.msu.edu.ua/?s=%D0%A3%D1%87%D0%B0%D1%81%D1%82%D1%8C+%D1%81%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%96%D0%B2+%D1%83+%D0%B2%D1%81%D0%B5%D1%83%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D1%81%D1%8C%D0%BA%D0%BE%D0%BC%D1%83+%D0%BC%D1%96%D0%B6%D1%83%D0%BD%D1%96%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82%D1%81%D1%8C%D0%BA%D0%BE%D0%BC%D1%83+%D1%85%D0%B0%D0%BA%D0%B0%D1%82%D0%BE%D0%BD%D1%96+%D0%9C%D0%A5%D0%9F"
+               },
+               {
+                    title: "Розвиток академічної мобільності",
+                    path: "http://vsc.msu.edu.ua/?s=%D0%A0%D0%BE%D0%B7%D0%B2%D0%B8%D1%82%D0%BE%D0%BA+%D0%B0%D0%BA%D0%B0%D0%B4%D0%B5%D0%BC%D1%96%D1%87%D0%BD%D0%BE%D1%97+%D0%BC%D0%BE%D0%B1%D1%96%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%96"
+               },
+               {
+                    title: "Актуальні технічні рішення та професійні компетентності: захист курсових проєктів",
+                    path: "http://vsc.msu.edu.ua/?s=%D0%90%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%96+%D1%82%D0%B5%D1%85%D0%BD%D1%96%D1%87%D0%BD%D1%96+%D1%80%D1%96%D1%88%D0%B5%D0%BD%D0%BD%D1%8F+%D1%82%D0%B0+%D0%BF%D1%80%D0%BE%D1%84%D0%B5%D1%81%D1%96%D0%B9%D0%BD%D1%96+%D0%BA%D0%BE%D0%BC%D0%BF%D0%B5%D1%82%D0%B5%D0%BD%D1%82%D0%BD%D0%BE%D1%81%D1%82%D1%96%3A+%D0%B7%D0%B0%D1%85%D0%B8%D1%81%D1%82+%D0%BA%D1%83%D1%80%D1%81%D0%BE%D0%B2%D0%B8%D1%85+%D0%BF%D1%80%D0%BE%D1%94%D0%BA%D1%82%D1%96%D0%B2"
+               },
+               {
+                    title: "Гостьова лекція для студентів спеціальності 151",
+                    path: "http://vsc.msu.edu.ua/?s=%D0%93%D0%BE%D1%81%D1%82%D1%8C%D0%BE%D0%B2%D0%B0+%D0%BB%D0%B5%D0%BA%D1%86%D1%96%D1%8F+%D0%B4%D0%BB%D1%8F+%D1%81%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%96%D0%B2+%D1%81%D0%BF%D0%B5%D1%86%D1%96%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%96+151"
+               },
+               {
+                    title: "Методичний семінар",
+                    path: "http://vsc.msu.edu.ua/?s=%D0%9C%D0%B5%D1%82%D0%BE%D0%B4%D0%B8%D1%87%D0%BD%D0%B8%D0%B9+%D1%81%D0%B5%D0%BC%D1%96%D0%BD%D0%B0%D1%80"
+               },
+               {
+                    title: "Заняття-екскурсія з дисципліни «Вступ до спеціальності»",
+                    path: "http://vsc.msu.edu.ua/?s=%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D1%82%D1%8F-%D0%B5%D0%BA%D1%81%D0%BA%D1%83%D1%80%D1%81%D1%96%D1%8F+%D0%B7+%D0%B4%D0%B8%D1%81%D1%86%D0%B8%D0%BF%D0%BB%D1%96%D0%BD%D0%B8+%C2%AB%D0%92%D1%81%D1%82%D1%83%D0%BF+%D0%B4%D0%BE+%D1%81%D0%BF%D0%B5%D1%86%D1%96%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%96"
+               },
+               {
+                    title: "Інтегроване заняття на ПрАТ «Гроно-Текс»",
+                    path: "http://vsc.msu.edu.ua/?s=%D0%86%D0%BD%D1%82%D0%B5%D0%B3%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B5+%D0%B7%D0%B0%D0%BD%D1%8F%D1%82%D1%82%D1%8F+%D0%BD%D0%B0+%D0%9F%D1%80%D0%90%D0%A2+%C2%AB%D0%93%D1%80%D0%BE%D0%BD%D0%BE-%D0%A2%D0%B5%D0%BA%D1%81%C2%BB"
+               },
+               {
+                    title: "Студентська науково-практична конференція",
+                    path: "http://vsc.msu.edu.ua/?s=%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D1%8C%D0%BA%D0%B0+%D0%BD%D0%B0%D1%83%D0%BA%D0%BE%D0%B2%D0%BE-%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D1%87%D0%BD%D0%B0+%D0%BA%D0%BE%D0%BD%D1%84%D0%B5%D1%80%D0%B5%D0%BD%D1%86%D1%96%D1%8F"
+               }
           ]
      },
+
      {
           id: 3,
           FirstName: "Гера",
@@ -61,12 +88,19 @@ const users = [
           events: [
                {
                     title: "Актуальні технічні рішення та професійні компетентності: захист курсових проєктів",
-                    link: "pers1.html"
+                    path: "http://vsc.msu.edu.ua/?s=%D0%90%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%96+%D1%82%D0%B5%D1%85%D0%BD%D1%96%D1%87%D0%BD%D1%96+%D1%80%D1%96%D1%88%D0%B5%D0%BD%D0%BD%D1%8F+%D1%82%D0%B0+%D0%BF%D1%80%D0%BE%D1%84%D0%B5%D1%81%D1%96%D0%B9%D0%BD%D1%96+%D0%BA%D0%BE%D0%BC%D0%BF%D0%B5%D1%82%D0%B5%D0%BD%D1%82%D0%BD%D0%BE%D1%81%D1%82%D1%96%3A+%D0%B7%D0%B0%D1%85%D0%B8%D1%81%D1%82+%D0%BA%D1%83%D1%80%D1%81%D0%BE%D0%B2%D0%B8%D1%85+%D0%BF%D1%80%D0%BE%D1%94%D0%BA%D1%82%D1%96%D0%B2"
                },
-               { title: "Всеукраїнський хакатон від МХП", link: "pers1.html" },
-               { title: "Гостьова лекція для студентів спеціальності 151", link: "pers1.html" }
+               {
+                    title: "Всеукраїнський хакатон від МХП",
+                    path: "http://vsc.msu.edu.ua/?s=%D0%92%D1%81%D0%B5%D1%83%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D1%81%D1%8C%D0%BA%D0%B8%D0%B9+%D1%85%D0%B0%D0%BA%D0%B0%D1%82%D0%BE%D0%BD+%D0%B2%D1%96%D0%B4+%D0%9C%D0%A5%D0%9F"
+               },
+               {
+                    title: "Гостьова лекція для студентів спеціальності 151",
+                    path: "http://vsc.msu.edu.ua/?s=%D0%93%D0%BE%D1%81%D1%82%D1%8C%D0%BE%D0%B2%D0%B0+%D0%BB%D0%B5%D0%BA%D1%86%D1%96%D1%8F+%D0%B4%D0%BB%D1%8F+%D1%81%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%96%D0%B2+%D1%81%D0%BF%D0%B5%D1%86%D1%96%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%96+151"
+               }
           ]
      },
+
      {
           id: 4,
           FirstName: "Андреєва",
@@ -76,13 +110,29 @@ const users = [
           roles: ["specialist", "vikladach"],
           subjects: ["Теорія автоматичного регулювання (ТАР)"],
           events: [
-               { title: "Участь студентів у всеукраїнському міжуніверситетському хакатоні МХП", link: "pers1.html" },
-               { title: "Розвиток академічної мобільності", link: "pers1.html" },
-               { title: "Гостьова лекція для студентів спеціальності 151", link: "pers1.html" },
-               { title: "Методичний семінар", link: "pers1.html" },
-               { title: "Заняття-екскурсія з дисципліни «Вступ до спеціальності»", link: "pers1.html" }
+               {
+                    title: "Участь студентів у всеукраїнському міжуніверситетському хакатоні МХП",
+                    path: "http://vsc.msu.edu.ua/?s=%D0%A3%D1%87%D0%B0%D1%81%D1%82%D1%8C+%D1%81%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%96%D0%B2+%D1%83+%D0%B2%D1%81%D0%B5%D1%83%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D1%81%D1%8C%D0%BA%D0%BE%D0%BC%D1%83+%D0%BC%D1%96%D0%B6%D1%83%D0%BD%D1%96%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82%D1%81%D1%8C%D0%BA%D0%BE%D0%BC%D1%83+%D1%85%D0%B0%D0%BA%D0%B0%D1%82%D0%BE%D0%BD%D1%96+%D0%9C%D0%A5%D0%9F"
+               },
+               {
+                    title: "Розвиток академічної мобільності",
+                    path: "http://vsc.msu.edu.ua/?s=%D0%A0%D0%BE%D0%B7%D0%B2%D0%B8%D1%82%D0%BE%D0%BA+%D0%B0%D0%BA%D0%B0%D0%B4%D0%B5%D0%BC%D1%96%D1%87%D0%BD%D0%BE%D1%97+%D0%BC%D0%BE%D0%B1%D1%96%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%96"
+               },
+               {
+                    title: "Гостьова лекція для студентів спеціальності 151",
+                    path: "http://vsc.msu.edu.ua/?s=%D0%93%D0%BE%D1%81%D1%82%D1%8C%D0%BE%D0%B2%D0%B0+%D0%BB%D0%B5%D0%BA%D1%86%D1%96%D1%8F+%D0%B4%D0%BB%D1%8F+%D1%81%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%96%D0%B2+%D1%81%D0%BF%D0%B5%D1%86%D1%96%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%96+151"
+               },
+               {
+                    title: "Методичний семінар",
+                    path: "http://vsc.msu.edu.ua/?s=%D0%9C%D0%B5%D1%82%D0%BE%D0%B4%D0%B8%D1%87%D0%BD%D0%B8%D0%B9+%D1%81%D0%B5%D0%BC%D1%96%D0%BD%D0%B0%D1%80"
+               },
+               {
+                    title: "Заняття-екскурсія з дисципліни «Вступ до спеціальності»",
+                    path: "http://vsc.msu.edu.ua/?s=%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D1%82%D1%8F-%D0%B5%D0%BA%D1%81%D0%BA%D1%83%D1%80%D1%81%D1%96%D1%8F+%D0%B7+%D0%B4%D0%B8%D1%81%D1%86%D0%B8%D0%BF%D0%BB%D1%96%D0%BD%D0%B8+%C2%AB%D0%92%D1%81%D1%82%D1%83%D0%BF+%D0%B4%D0%BE+%D1%81%D0%BF%D0%B5%D1%86%D1%96%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%96%C2%BB"
+               }
           ]
      },
+
      {
           id: 5,
           FirstName: "Іваніга",
@@ -92,9 +142,18 @@ const users = [
           roles: ["specialist", "vikladach"],
           subjects: ["Теорія автоматичного регулювання (ТАР)"],
           events: [
-               { title: "Участь студентів у всеукраїнському міжуніверситетському хакатоні МХП", link: "pers1.html" },
-               { title: "Розвиток академічної мобільності", link: "pers1.html" },
-               { title: "Гостьова лекція для студентів спеціальності 151", link: "pers1.html" }
+               {
+                    title: "Участь студентів у всеукраїнському міжуніверситетському хакатоні МХП",
+                    path: "http://vsc.msu.edu.ua/?s=%D0%A3%D1%87%D0%B0%D1%81%D1%82%D1%8C+%D1%81%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%96%D0%B2+%D1%83+%D0%B2%D1%81%D0%B5%D1%83%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D1%81%D1%8C%D0%BA%D0%BE%D0%BC%D1%83+%D0%BC%D1%96%D0%B6%D1%83%D0%BD%D1%96%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82%D1%81%D1%8C%D0%BA%D0%BE%D0%BC%D1%83+%D1%85%D0%B0%D0%BA%D0%B0%D1%82%D0%BE%D0%BD%D1%96+%D0%9C%D0%A5%D0%9F"
+               },
+               {
+                    title: "Розвиток академічної мобільності",
+                    path: "http://vsc.msu.edu.ua/?s=%D0%A0%D0%BE%D0%B7%D0%B2%D0%B8%D1%82%D0%BE%D0%BA+%D0%B0%D0%BA%D0%B0%D0%B4%D0%B5%D0%BC%D1%96%D1%87%D0%BD%D0%BE%D1%97+%D0%BC%D0%BE%D0%B1%D1%96%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%96"
+               },
+               {
+                    title: "Гостьова лекція для студентів спеціальності 151",
+                    path: "http://vsc.msu.edu.ua/?s=%D0%93%D0%BE%D1%81%D1%82%D1%8C%D0%BE%D0%B2%D0%B0+%D0%BB%D0%B5%D0%BA%D1%86%D1%96%D1%8F+%D0%B4%D0%BB%D1%8F+%D1%81%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%96%D0%B2+%D1%81%D0%BF%D0%B5%D1%86%D1%96%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%96+151"
+               }
           ]
      }
 ];
@@ -103,6 +162,16 @@ const users = [
 localStorage.setItem("users", JSON.stringify(users));
 
 function openModal(id) {
+     // 🔥 СКИДАЄМО СТАН (це головне)
+     document.querySelectorAll(".open, .active, .show").forEach((el) => {
+          el.classList.remove("open", "active", "show");
+     });
+
+     // якщо використовуєш <details>
+     document.querySelectorAll("details").forEach((d) => {
+          d.removeAttribute("open");
+     });
+
      const user = users.find((u) => u.id === Number(id));
      if (!user) return;
 
@@ -129,12 +198,12 @@ function openModal(id) {
           ul.appendChild(li);
      });
 
-     // 🔥 події з переходом
+     // події
      user.events.forEach((eventi, index) => {
           let li = document.createElement("li");
           let a = document.createElement("a");
 
-          a.href = `pers1.html?user=${user.id}&event=${index}&title=${encodeURIComponent(eventi.title)}`;
+          a.href = eventi.path;
           a.textContent = eventi.title;
 
           li.appendChild(a);
@@ -176,8 +245,8 @@ renderEvent(event1, "event1");
 
 // Подія з HTML-текстом
 const event2 = {
-    title: "Розвиток академічної мобільності",
-    text: `
+     title: "Розвиток академічної мобільності",
+     text: `
 <div>
   <p>28 травня відбулася робоча зустріч представників двох провідних закладів фахової передвищої освіти,
   під час якої обговорювалися ключові аспекти впровадження внутрішньої академічної мобільності.</p>
@@ -204,38 +273,34 @@ const event2 = {
   <p>Стежте за нашими новинами — попереду ще багато нових ініціатив, цікавих подій і прикладів ефективної співпраці в освіті!</p>
 </div>
 `,
-    photos: [
-        "mobility/photo1.jpg",
-        "mobility/photo2.jpg",
-        "mobility/photo3.jpg"
-    ]
+     photos: ["mobility/photo1.jpg", "mobility/photo2.jpg", "mobility/photo3.jpg"]
 };
 
 // Функція рендерингу події
 function renderEvent(event, containerId) {
-    const container = document.getElementById(containerId);
-    if (!container) return;
+     const container = document.getElementById(containerId);
+     if (!container) return;
 
-    // Заголовок
-    const titleEl = document.createElement("h2");
-    titleEl.textContent = event.title;
-    container.appendChild(titleEl);
+     // Заголовок
+     const titleEl = document.createElement("h2");
+     titleEl.textContent = event.title;
+     container.appendChild(titleEl);
 
-    // Текст (HTML)
-    const textEl = document.createElement("div");
-    textEl.innerHTML = event.text;  // тут HTML зберігається як є
-    container.appendChild(textEl);
+     // Текст (HTML)
+     const textEl = document.createElement("div");
+     textEl.innerHTML = event.text; // тут HTML зберігається як є
+     container.appendChild(textEl);
 
-    // Фото
-    const photosEl = document.createElement("div");
-    photosEl.classList.add("photos-container");
-    event.photos.forEach(src => {
-        const img = document.createElement("img");
-        img.src = src;
-        img.alt = event.title;
-        photosEl.appendChild(img);
-    });
-    container.appendChild(photosEl);
+     // Фото
+     const photosEl = document.createElement("div");
+     photosEl.classList.add("photos-container");
+     event.photos.forEach((src) => {
+          const img = document.createElement("img");
+          img.src = src;
+          img.alt = event.title;
+          photosEl.appendChild(img);
+     });
+     container.appendChild(photosEl);
 }
 
 // Викликаємо рендер
