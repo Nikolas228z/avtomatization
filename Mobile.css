@@ -27,7 +27,6 @@ body{
 .mainButton{
     height: 15vh;
     width: 15%;
-    transform: translateY(-5vh);
 }
 
 .cardFlex{
@@ -42,20 +41,17 @@ body{
         display: flex;
         flex-direction: column; /* 🔥 головне */
         align-items: center;   /* центрує по горизонталі */
-        justify-content: flex-start;
+           height: 90%;
+           justify-content: space-between;
     }
 
     .forAnother.reverse{
         flex-direction: column-reverse; /* для анімації */
     }
     .buton{
-        width: 80%;        /* норм ширина */
+        width: 80%  !important;       /* норм ширина */
         height: 50px;      /* норм висота */
-           position: absolute;
-    top: 3px; /* 3px від верхньої стінки */
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 10;
+
     }
     .forDivHis{
         border-radius: 3vh 3vh 0 0;

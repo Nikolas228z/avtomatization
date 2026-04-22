@@ -1,13 +1,28 @@
 let withZ = 150;
 
+// ширина екрана (вікна браузера)
+let screenWidth = window.innerWidth;
+
+// середина екрана
+let centerScreen = screenWidth / 2;
+
+console.log("Ширина:", screenWidth);
+console.log("Середина:", centerScreen);
+
 function page(username, describe, pess){
    let forDiv = document.createElement("div");
+    forDiv.style.left = centerScreen+"px";
    let withDisFlx = document.createElement("div");
+    withDisFlx.style.left = centerScreen;
    let another = document.createElement("div");
+    another.style.left = centerScreen;
    let forH2 = document.createElement("h2");
    let p = document.createElement("p");
    let button = document.createElement("button");
    let image = document.createElement("img");
+
+
+
 
    button.textContent= ">";
 
