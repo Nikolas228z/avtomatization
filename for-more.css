@@ -108,6 +108,11 @@ body {
     transform: translateY(-27vh);
 }
 
+
+.div-wht-dis{
+    display: flex;
+}
+
 .div-wht-dis2 {
     display: flex;
 
@@ -184,6 +189,9 @@ body {
 .fifty {
     width: 30%;
 }
+.for-img{
+    width: 50%;
+}
 .text {
     color: white;
     margin-bottom: 0;
@@ -191,6 +199,9 @@ body {
     text-align: center;
     font-size: 1.5rem;
     font-weight: 900;
+    width: 51%;
+    display: flex;
+    align-items: center
 }
 .for-vid {
     width: 100%;
