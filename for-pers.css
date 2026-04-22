@@ -196,7 +196,7 @@ main {
 .event-photos img {
     width: 32%;
     border-radius: 20px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     object-fit: cover;
 }
 
@@ -231,8 +231,16 @@ main {
     color: white;
     transition: 0.25s;
 }
-
-.events-list a:hover {
+#uli li {
+    display: block;
+    padding: 10px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    transition: 0.25s;
+}
+.events-list a:hover,
+#uli li:hover {
     background: rgba(255, 255, 255, 0.15);
     transform: translateX(6px);
 }
@@ -456,6 +464,6 @@ h4 {
         font-size: 2.1rem;
     }
     .events-list li {
-    font-size: 1.9rem;
-}
+        font-size: 1.9rem;
+    }
 }

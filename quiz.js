@@ -43,7 +43,7 @@ const questions = [
         answer3: "Автоматичне керування даними",
         answer4: "Комп’ютерне проєктування",
         correctAnswer: 4
-    } /*,
+    } ,
     {
         id: 4,
         name: "Яка основна функція датчиків у робототехніці?",
@@ -106,7 +106,7 @@ const questions = [
         answer3: "Робота одного верстата",
         answer4: "Ручне керування процесами",
         correctAnswer: 2
-    }*/
+    }
 ];
 
 let allquestion = 100 / questions.length;
