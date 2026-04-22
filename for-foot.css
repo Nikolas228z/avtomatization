@@ -27,7 +27,7 @@ footer {
   font-weight: 900;
   padding-top: 23px;
 }
-.div-wht-dis {
+.div-wht-dis1 {
   display: flex;
   justify-content: space-around;
 }
@@ -96,6 +96,11 @@ svg {
   main{
     margin-top: 15%
   }
+  .logo {
+  width: 77%;
+  filter: grayscale(100%);
+
+}
 
 }
 @media (max-width:1000px){
