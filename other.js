@@ -14,8 +14,6 @@ function page(username, describe, pess){
    // ✅ правильне підключення картинки
    if(pess){
        image.src = pess;
-       image.style.width = "90%";
-        image.style.display = "none";
        another.appendChild(image);
    }
 
@@ -40,7 +38,7 @@ function page(username, describe, pess){
    forSection.appendChild(forDiv);
 
    if (username == "Історія Автоматизації"){
-        forH2.style.marginTop = "35%";
+        forH2.style.marginTop = "3%";
    }
 }
 
@@ -55,6 +53,7 @@ function Anim(e, another, withDisFlx,image,forH2,p){
         image.classList.remove("forREdo");
         image.classList.add("animWithOpasity");
         forH2.classList.remove("animWithOpasity");
+        image.classList.add("hidden");
         forH2.classList.add("forREdo");
         p.classList.remove("animWithOpasity");
         p.classList.add("forREdo");
@@ -72,6 +71,7 @@ function Anim(e, another, withDisFlx,image,forH2,p){
         image.classList.add("forREdo");
         forH2.classList.remove("forREdo");
         forH2.classList.add("animWithOpasity");
+        image.classList.remove("hidden");
         p.classList.remove("forREdo");
         p.classList.add("animWithOpasity");
         image.style.display ="inline-block";

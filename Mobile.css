@@ -36,8 +36,12 @@ body{
 }
 
 @media (max-width: 1000px){
+    main{
+        height: 110vh;
+    }
 
        .forAnother{
+            width: 100%;
         display: flex;
         flex-direction: column; /* 🔥 головне */
         align-items: center;   /* центрує по горизонталі */
@@ -54,6 +58,8 @@ body{
 
     }
     .forDivHis{
+        left: 50%;
+    transform: translateX(-50%);
         border-radius: 3vh 3vh 0 0;
         width: 90% !important;
          display: flex;
@@ -62,6 +68,16 @@ body{
     justify-content: center; /* центруємо по вертикалі */
     overflow: hidden;
     }
+    .hidden{
+    display: none;
+}
+.forDivHis img{
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+    display: block;
+    border-radius: 1vh;
+}
 
     .card{
         width: 90% !important;
@@ -88,16 +104,18 @@ body{
 
 @keyframes animationInLeft{
     0%{
-        transform: translateY(0) rotate3d(1, 0, 0, 180deg);
-        border-radius: 3vh 3vh 0 0;
+        transform: translateX(-50%) translateY(0)
+                   rotate3d(1,0,0,180deg);
     }
+
     50%{
-        transform: translateY(50%) rotate3d(1, 0, 0, 90deg);
-        border-radius: 0 ;
+        transform: translateX(-50%) translateY(50%)
+                   rotate3d(1,0,0,90deg);
     }
+
     100%{
-        transform: translateY(100%) rotate3d(1, 0, 0, 0deg);
-        border-radius: 0 0 3vh 3vh;
+        transform: translateX(-50%) translateY(100%)
+                   rotate3d(1,0,0,0deg);
     }
 }
 
@@ -105,22 +123,24 @@ body{
       animation-name: animationInRight !important;
     animation-duration: 1.3s;
     animation-iteration-count: 1;
-    transform: translateY(0) rotate3d(1, 0, 0, 0deg);
+    transform: translateX(-50%) translateY(0%) rotate3d(1,0,0,0deg);
     border-radius: 3vh 3vh 0 0;
 }
 
 @keyframes animationInRight{
     0%{
-        transform: translateY(100%) rotate3d(1, 0, 0, 180deg);
-        border-radius: 3vh 0 0 3vh ;
+        transform: translateX(-50%) translateY(100%)
+                   rotate3d(1,0,0,180deg);
     }
+
     50%{
-          transform: translateY(50%) rotate3d(1, 0, 0, 90deg);
-        border-radius:  0;
+        transform: translateX(-50%) translateY(50%)
+                   rotate3d(1,0,0,90deg);
     }
+
     100%{
-        transform: translateY(0) rotate3d(1, 0, 0, 0deg);
-        border-radius: 3vh 3vh 0 0;
+        transform: translateX(-50%) translateY(0%)
+                   rotate3d(1,0,0,0deg);
     }
 }
 
