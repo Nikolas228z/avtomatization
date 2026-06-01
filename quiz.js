@@ -4,8 +4,8 @@ let answer1 = document.getElementById("answer1");
 let answer2 = document.getElementById("answer2");
 let answer3 = document.getElementById("answer3");
 let answer4 = document.getElementById("answer4");
-let div = document.getElementById("div");
-let button = document.getElementById("button");
+let test = document.getElementById("div");
+let buton = document.getElementById("buton");
 let timer;
 let score = 0;
 let p = document.getElementById("result");
@@ -43,7 +43,7 @@ const questions = [
         answer3: "Автоматичне керування даними",
         answer4: "Комп’ютерне проєктування",
         correctAnswer: 4
-    } /*,
+    } ,
     {
         id: 4,
         name: "Яка основна функція датчиків у робототехніці?",
@@ -106,22 +106,22 @@ const questions = [
         answer3: "Робота одного верстата",
         answer4: "Ручне керування процесами",
         correctAnswer: 2
-    }*/
+    }
 ];
 
 let allquestion = 100 / questions.length;
 console.log(allquestion);
-function check(button, correct) {
+function check(buton, correct) {
     answer1.disabled = true;
     answer2.disabled = true;
     answer3.disabled = true;
     answer4.disabled = true;
     if (questions[currentQuestion].correctAnswer == correct) {
         console.log(correct);
-        button.style.background = "green";
+        buton.style.background = "green";
         score = score + 1;
     } else {
-        button.style.background = "red";
+        buton.style.background = "red";
         buttons[questions[currentQuestion].correctAnswer - 1].style.background = "green";
     }
     currentQuestion = currentQuestion + 1;
@@ -151,19 +151,19 @@ function chc() {
 }
 function start() {
     chc();
-    div.style.display = "block";
+    test.style.display = "block";
     div3.style.display = "block";
     question.textContent = questions[currentQuestion].name;
     answer1.textContent = questions[currentQuestion].answer1;
     answer2.textContent = questions[currentQuestion].answer2;
     answer3.textContent = questions[currentQuestion].answer3;
     answer4.textContent = questions[currentQuestion].answer4;
-    button.style.backgroundColor = "white";
+    buton.style.backgroundColor = "white";
     answer1.disabled = false;
     answer2.disabled = false;
     answer3.disabled = false;
     answer4.disabled = false;
-    button.style.display = "none";
+    buton.style.display = "none";
     /*     p.style.display = "none";
     red.style.display = "none";
     green.style.display = "none";

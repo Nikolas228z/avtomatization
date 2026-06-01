@@ -179,7 +179,7 @@ body {
 }
 
 /* ================= START BUTTON ================= */
-#button {
+#buton {
     margin-top: 30px;
     width: 240px;
     padding: 16px;
@@ -245,8 +245,14 @@ body {
     .general-sec {
         flex-direction: column;
         min-height: auto;
+        width: 100%;
     }
-
+    main {
+        min-height: 90vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
     /* бокові картинки ховаємо */
     .general-div-1 {
         display: none;
@@ -315,15 +321,16 @@ body {
     }
 
     .logo {
-        max-width: 120px;
         margin: 0 auto;
     }
 }
-@media (max-width: 1200px){
-    #answer1, #answer2, #answer3, #answer4{
-    font-size: 44px;
-    text-align: center;
-    padding: 15%;
+@media (max-width: 1200px) {
+    #answer1,
+    #answer2,
+    #answer3,
+    #answer4 {
+        font-size: 44px;
+        text-align: center;
+        padding: 15%;
     }
-
 }
