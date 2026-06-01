@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AutoFlow — Автоматизація процесів</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#e6d7c8; /* warm beige background from template */
+      --panel:#0f1112; /* deep charcoal panels */
+      --muted:#bfb0a1; /* muted beige text */
+      --accent:#d9b38a; /* warm accent */
+      --glass: rgba(255,255,255,0.06);
+      --radius:28px;
+      --container-width:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:#fff}
+    .frame{max-width:calc(var(--container-width) + 80px);margin:40px auto;padding:20px;border-radius:30px;background:linear-gradient(180deg, rgba(0,0,0,0.06), rgba(0,0,0,0.02));display:flex;justify-content:center}
+    .device{width:100%;max-width:var(--container-width);background:var(--panel);border-radius:20px;padding:26px;position:relative;overflow:hidden}
+    /* Top bar */
+    .topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+    .logo{display:flex;gap:12px;align-items:center}
+    .logo .mark{width:40px;height:40px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#bb8b5a);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--panel);font-family:Playfair Display}
+    .logo .title{font-family:Playfair Display;font-size:18px;letter-spacing:1px}
+    nav{display:flex;gap:18px;align-items:center;color:var(--muted);font-size:14px}
+    .avatar{width:36px;height:36px;border-radius:50%;background:#fff;color:var(--panel);display:flex;align-items:center;justify-content:center;font-weight:600}
+
+    /* Main grid */
+    .grid{display:grid;grid-template-columns:420px 1fr;gap:22px}
+    .left-panel{background:var(--panel);padding:18px;border-radius:var(--radius);display:flex;flex-direction:column;justify-content:space-between}
+    .left-hero{font-family:Playfair Display;font-size:44px;line-height:0.95;color:#fff}
+    .left-sub{margin-top:12px;color:var(--muted);font-size:15px}
+
+    .center-stage{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));border-radius:var(--radius);padding:26px;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:420px;position:relative}
+    .device-art{width:220px;height:220px;border-radius:16px;background:linear-gradient(180deg,#f7efe6, #edd9c6);display:flex;align-items:center;justify-content:center;box-shadow:0 14px 40px rgba(0,0,0,0.45);transform:translateY(-18px)}
+    .device-art svg{width:120px;height:120px}
+    .center-caption{position:absolute;right:22px;top:24px;background:var(--panel);padding:12px;border-radius:18px;color:var(--muted);max-width:320px}
+
+    /* Right bottom CTA */
+    .cta-wrap{display:flex;flex-direction:column;gap:12px;align-items:flex-end}
+    .cta-btn{background:#fff;color:var(--panel);padding:12px 20px;border-radius:28px;border:none;font-weight:600}
+    .tiny{color:var(--muted);font-size:13px}
+
+    /* Feature band under hero */
+    .features{display:flex;gap:16px;margin-top:20px}
+    .card{background:var(--panel);padding:16px;border-radius:14px;flex:1;min-height:100px}
+    .card h4{margin:0 0 8px 0;font-size:16px;font-weight:600}
+    .card p{margin:0;color:var(--muted);font-size:13px}
+
+    /* Footer area */
+    .footer{margin-top:18px;display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:13px}
+
+    /* Responsive */
+    @media(max-width:980px){
+      .grid{grid-template-columns:1fr;}
+      .left-panel{order:2}
+      .center-stage{order:1}
+      .device-art{width:180px;height:180px}
+    }
+
+    /* small decorative rounded panels like the template cutouts */
+    .cutout{position:absolute;border-radius:var(--radius);background:var(--panel);opacity:0.98;pointer-events:none}
+    .cutout.left{left:-80px;top:60px;width:220px;height:140px}
+    .cutout.right{right:-70px;top:140px;width:200px;height:120px}
+  </style>
+  <style>
+        .custom-shape {
+  width: 500px;
+  height: 350px;
+  overflow: hidden;
+  clip-path: path("M40,0 H460 Q500,0 500,40 V310 Q500,350 460,350 H40 Q0,350 0,310 V40 Q0,0 40,0 Z");
+  /* фон для перевірки форми */
+  background: #222;
+  margin: 50px auto;
+  border-radius: 25px;
+}
+
+.custom-shape img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+        </style>
+</head>
+<body>
+  <div class="frame">
+    <div class="device" role="main">
+
+      <div class="topbar">
+        <div class="logo">
+          <div class="mark">AF</div>
+          <div class="title">AutoFlow</div>
+        </div>
+        <nav>
+          <a href="#">Головна</a>
+          <a href="#features">Функції</a>
+          <a href="#pricing">Плани</a>
+          <a href="#contact">Контакти</a>
+          <div class="avatar">JS</div>
+        </nav>
+      </div>
+      <div class="custom-shape">
+  <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNmF3NDBjbmh6eGZvYWgyb2NhdnEyNDF0bjB4OW9vNzNjbW5oNjk1MSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5k5vZwRFZR5aZeniqb/giphy.gif" alt="Center Image">
+</div>
+
+    </div>
+  </div>
+</body>
+</html>
